@@ -36,6 +36,7 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         registerFinishCurrentPageWorkMonitor();
+        mContext = this;
         if (session == null) {
             // 获取Session
             session = MySession.getInstance();

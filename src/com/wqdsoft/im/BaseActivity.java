@@ -44,6 +44,7 @@ public class BaseActivity extends FragmentActivity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		registerFinishCurrentPageWorkMonitor();
+		mContext = this;
 	}
 	
 	
