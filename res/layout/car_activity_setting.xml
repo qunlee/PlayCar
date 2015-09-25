@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue_5b5184">
+
+        <TextView
+            android:id="@+id/go_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@drawable/car_go_back_icon"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:onClick="onClick"
+            android:clickable="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="设置"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/secure"
+        style="@style/rec_whrite_style"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/title_bar"
+        android:text="账号与安全" />
+
+    <TextView
+        android:id="@+id/mode"
+        style="@style/rec_whrite_style"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/secure"
+        android:layout_marginTop="10dp"
+        android:text="隐身模式" />
+
+    <RelativeLayout
+        android:id="@+id/message_remind"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/mode"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="消息提醒" />
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:text="开启" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/car_icon_arrow_right" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/message_remind"
+        android:background="@color/grey_d8d8d8" />
+
+    <TextView
+        android:id="@+id/black_list"
+        style="@style/rec_whrite_style"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="10dp"
+        android:text="黑名单" />
+
+    <TextView
+        android:id="@+id/about"
+        style="@style/rec_whrite_style"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/black_list"
+        android:layout_marginTop="10dp"
+        android:text="关于" />
+
+    <TextView
+        android:id="@+id/exit"
+        style="@style/rec_whrite_style"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/about"
+        android:layout_marginTop="10dp"
+        android:text="退出当前账号" />
+</RelativeLayout>

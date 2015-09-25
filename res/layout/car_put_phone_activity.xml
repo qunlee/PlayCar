@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_f4f4f4">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue_5b5184"
+        >
+        <ImageView
+            android:id="@+id/go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/car_go_back_icon"/>
+        <TextView
+            android:id="@+id/go_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:text="返回"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/go_back"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/go_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:text="下一步"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="注册"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/login_by_phone"
+        android:visibility="visible"
+        android:background="@color/white"
+        android:layout_below="@id/title_bar"
+        android:layout_marginTop="30dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:id="@+id/login_phone_num"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:text="中国 ＋86"
+            android:textSize="15sp"
+            android:textColor="@color/grey_999999"
+            android:gravity="center_vertical"
+            android:textCursorDrawable="@drawable/color_cursor"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey_cccccc"
+            android:layout_below="@id/login_phone_num"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/login_phone_num_line"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:id="@+id/login_code"
+            android:hint="请输入手机号码"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/login_phone_num"
+            android:textSize="15sp"
+            android:textColor="@color/grey_434343"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="11"
+            android:textCursorDrawable="@drawable/color_cursor"
+            />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/regist_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/login_by_phone"
+        android:layout_marginLeft="15dp"
+        android:text="点击下一步表示您已同意"
+        android:gravity="left"
+        android:textColor="@color/grey_999999"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/regist_tv_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignBottom="@id/regist_tv"
+        android:layout_toRightOf="@id/regist_tv"
+        android:layout_marginRight="15dp"
+        android:text="玩车车软件许可及服务协议"
+        android:gravity="left"
+        android:textColor="@color/blue_5b5184"
+        android:textSize="12sp"/>
+
+
+
+</RelativeLayout>

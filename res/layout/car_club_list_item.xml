@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <ImageView
+            android:id="@+id/car_club_list_item_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/car_head_update_icon"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:text="Aure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/car_club_list_item_name"
+            android:textSize="18sp"
+            android:textColor="@color/grey_666666"
+            android:layout_toRightOf="@id/car_club_list_item_icon"
+            android:layout_alignTop="@id/car_club_list_item_icon"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:text="暮然回首"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/car_club_list_item_msg"
+            android:textSize="14sp"
+            android:textColor="@color/grey_666666"
+            android:layout_toRightOf="@id/car_club_list_item_icon"
+            android:layout_below="@id/car_club_list_item_name"
+            android:gravity="right"
+            android:paddingRight="2dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"/>
+
+
+        <TextView
+            android:text="关注"
+            android:layout_width="60dp"
+            android:layout_height="27dp"
+            android:id="@+id/car_club_list_item_stat"
+            android:textSize="14sp"
+            android:textColor="@color/grey_666666"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/car_shape_grey_bg"
+            android:gravity="center"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

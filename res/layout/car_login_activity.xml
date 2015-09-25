@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/banner_layout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/banner_pager"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:clickable="true" />
+
+        <com.zhuliangtian.app.view.indicator.CirclePageIndicator
+            android:id="@+id/page_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:padding="10dip"
+            app:fillColor="@color/white" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/regist_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_corner_order_red_bg"
+        android:layout_below="@id/banner_layout"
+        android:layout_marginTop="20dp"
+        android:text="注 册"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="22sp"/>
+
+    <RelativeLayout
+        android:id="@+id/other_login_tv_view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/regist_btn"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/other_login_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用第三放账号登陆"
+
+            android:textColor="@color/grey_999999"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="1dp"
+            android:layout_toLeftOf="@id/other_login_tv"
+            android:background="@color/grey_999999"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"/>
+
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="1dp"
+            android:layout_toRightOf="@id/other_login_tv"
+            android:background="@color/grey_999999"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/other_login_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/other_login_tv_view"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:id="@+id/qq_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/car_qq_login_icon"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/wx_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/car_wx_login_icon"
+            android:layout_toLeftOf="@id/qq_login"
+            android:layout_marginRight="30dp"/>
+
+        <ImageView
+            android:id="@+id/wb_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/car_wb_logn_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/qq_login"
+            android:layout_marginLeft="30dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/d_sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/other_login_image_view"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/grey_999999"
+        android:textSize="14sp"
+        android:text="，"/>
+    <TextView
+        android:id="@+id/d_sp_tv_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/other_login_image_view"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/grey_999999"
+        android:text="已经注册 "
+        android:layout_toLeftOf="@+id/d_sp"/>
+    <TextView
+        android:id="@+id/d_sp_tv_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/other_login_image_view"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/grey_999999"
+        android:text="去"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/d_sp"/>
+
+    <TextView
+        android:id="@+id/Login_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/other_login_image_view"
+        android:textColor="@color/blue_5b5184"
+        android:text=" 登陆"
+        android:textSize="16sp"
+        android:layout_toRightOf="@id/d_sp_tv_r"
+        android:layout_marginTop="23dp"
+
+        />
+
+
+
+
+
+</RelativeLayout>

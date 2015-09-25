@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue_5b5184">
+
+        <TextView
+            android:id="@+id/go_back_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@drawable/car_go_back_icon"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:paddingLeft="15dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="编辑资料"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:paddingRight="15dp"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/head_layout"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/personal_bg">
+
+                <LinearLayout
+                    android:id="@+id/pic_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/nick_layout"
+                style="@style/rec_44dp_click_style"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@id/head_layout">
+
+                <TextView
+                    style="@style/title_14sp_999999_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="昵称" />
+
+                <TextView
+                    android:id="@+id/nick"
+                    style="@style/title_14sp_666666_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="月色静好" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/age_layout"
+                style="@style/rec_44dp_click_style"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@id/nick_layout">
+
+                <TextView
+                    style="@style/title_14sp_999999_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="年龄" />
+
+                <TextView
+                    android:id="@+id/age"
+                    style="@style/title_14sp_666666_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="22" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/voice_layout"
+                style="@style/rec_44dp_noclick_style"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@id/age_layout">
+
+                <TextView
+                    style="@style/title_14sp_999999_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="语音介绍" />
+
+                <TextView
+                    android:id="@+id/add_voice"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:drawableLeft="@drawable/car_icon_voice"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="添加语音"
+                    android:textColor="@color/blue_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/feel_layout"
+                style="@style/rec_44dp_click_style"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@id/voice_layout">
+
+                <TextView
+                    style="@style/title_14sp_999999_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="个性签名" />
+
+                <TextView
+                    android:id="@+id/add_feel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:drawableRight="@drawable/car_icon_arrow_right"
+                    android:gravity="center_vertical"
+                    android:text="添加个性签名"
+                    android:textColor="@color/blue_color"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/marry_layout"
+                style="@style/rec_44dp_click_style"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@id/feel_layout">
+
+                <TextView
+                    style="@style/title_14sp_999999_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="情感状态" />
+
+                <TextView
+                    android:id="@+id/marry"
+                    style="@style/title_14sp_666666_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="保密" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/job_layout"
+                style="@style/rec_44dp_noclick_style"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@id/marry_layout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    style="@style/title_14sp_999999_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="职业" />
+
+                <TextView
+                    android:id="@+id/job"
+                    style="@style/title_14sp_666666_style2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="汽车销售" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/company_layout"
+                style="@style/rec_44dp_noclick_style"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@id/job_layout">
+
+                <TextView
+                    style="@style/title_14sp_999999_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="公司" />
+
+                <TextView
+                    android:id="@+id/company"
+                    style="@style/title_14sp_666666_style2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="浙江优瑞汽车有限公司" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/address_layout"
+                style="@style/rec_44dp_noclick_style"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@id/company_layout">
+
+                <TextView
+                    style="@style/title_14sp_999999_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="所在地" />
+
+                <TextView
+                    android:id="@+id/address"
+                    style="@style/title_14sp_666666_style2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="浙江杭州" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/register_layout"
+                style="@style/rec_44dp_noclick_style"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/address_layout">
+
+                <TextView
+                    style="@style/title_14sp_999999_style"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="注册日期" />
+
+                <TextView
+                    android:id="@+id/register"
+                    style="@style/title_14sp_666666_style2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="2015-8-9" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

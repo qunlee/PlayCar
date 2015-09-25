@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="backgroud_color">#f7f7f7</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="select_system_text_color">#b7b7b7</color>
+    <color name="text_color">#777777</color>
+    <color name="login_text_color">#d1d8d1</color>
+    <color name="tab_text_n_color">#E5D16D</color>
+    <color name="listview_foucs">#80dedede</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="title_bar_text_color">#b3b3b3</color>
+    <color name="chat_username_text_color">#111111</color>
+    <color name="order_selected_color">#dadada</color>
+    <color name="order_price_color">#CC3333</color>
+    <color name="high_lighted_color">#C4E0F5</color>
+    <color name="login_icon_bg">#005ead</color>
+    <color name="login_username_text_color">#7cd1f8</color>
+    <color name="website_color">#a2e5ff</color>
+    <color name="order_detail_price_color">#ff0000</color>
+    <color name="order_detail_price_hint_color">#333333</color>
+    <color name="product_status">#FF6600</color>
+    <color name="about_website_color">#0096ff</color>
+    <color name="search_dialog_bg">#b0000000</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="order_title_color">#333333</color>
+    <color name="order_item_hint_color">#999999</color>
+    <color name="blue_color">#4494CB</color>
+    <color name="profile_menu_text_color">#E9EFF5</color>
+    <color name="gray_black">#1e1e1e</color>
+    
+    <color name="home_bg_color">#f7f7f7</color>
+    <color name="blog_text_bg">#B4CAD9</color>
+    <color name="focus_bg">#BCD9E9</color>
+    <color name="home_forward_content_color">#808080</color>
+    <color name="blog_content_count_color">#5a7083</color>
+    <color name="home_item_release_time">#666666</color>
+    <color name="menu_unchecked_color">#666666</color>
+    <color name="menu_checked_color">#E0BF3C</color>
+    <color name="gridground">#d5dbe9</color>
+    <color name="user_name">#4891C6</color>
+    <color name="font_color">#2d2d2d</color>
+    <color name="top_menu_unchecked_color">#C0B070</color>
+    <color name="top_menu_checked_color">#1A1A1A</color>
+    <color name="main_menu_selected_color">#161316</color>
+    <color name="order_menu_color">#AEAEAE</color>
+    <color name="order_keyboard_color">#EEEEEE</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+     <color name="green">#008000</color><!--绿色 -->
+     
+     <color name="back_layout_press_color">#b7242f</color><!-- 返回按钮背景 -->
+     <color name="editor_text_color">#808080</color>
+     <color name="editor_hint_color">#777777</color>
+     <color name="text_title_color">#656565</color>
+     <!-- application  color -->
+     <color name="application_black">#101010</color>
+     <color name="application_deep_gray_black">#828282</color>
+     <!-- 一般指时间 -->
+     <color name="application_gray_black">#a7a7a7</color>
+     <color name="application_red">#b7242f</color>
+     <color name="application_blue">#007bfd</color>
+     <color name="application_transparent_bg">#80000000</color>
+     <color name="application_friends_loop_user_name">#1f2f58</color>
+     <color name="application_search_title_bg_color">#C30312</color>
+     <color name="application_gray">#EAEAEA</color>
+     <color name="application_my_album_select">#BEBEBE</color>
+
+    <color name="dark_gray">#ff1a1a1a</color>
+    <color name="light_gray">#f6fbfb</color>
+    <color name="gray_333333">#333333</color>
+    <color name="gray2">#666666</color>
+    <color name="gray3">#4d4d4d</color>
+
+    <color name="light_red">#ff5a00</color>
+    <color name="coupons_disabled">#808080</color>
+    <color name="visits_color">#343434</color>
+    <color name="scenic_title">#2aaaac</color>
+    <color name="search_bg">#55bbbd</color>
+    <color name="search_hint_text">#e4f2f3</color>
+    <color name="details_line">#f2f2f2</color>
+    <color name="grey_fafafa">#fafafa</color>
+    <color name="search_click">#e4f2f3</color>
+    <color name="search_hit">#ffffff</color>
+    <color name="grey_999999">#999999</color>
+    <color name="green_7fd358">#7fd358</color>
+    <color name="yellow_ff8a00">#ff8a00</color>
+    <color name="bg_gray">#FFEAEEF2</color>
+    <color name="tab_normal_text">#aaaaaa</color>
+    <color name="message_item_timecolor">#b3b3b3</color>
+    <color name="message_bg">#f7f7f7</color>
+    <color name="message_info_bg">#ffffff</color>
+    <color name="main_count_style">#51babb</color>
+    <color name="grey_434343">#434343</color>
+    <color name="grey_eeeeee">#eeeeee</color>
+    <color name="blue_51babb">#51babb</color>
+    <color name="top_bg">#51babb</color>
+    <color name="buyorder_icon_bg">#5cceb4</color>
+    <color name="order_icon_bg">#81a9e4</color>
+    <color name="hotel_icon_bg">#84c8ef</color>
+    <color name="message_icon_bg">#b995ec</color>
+    <color name="count_icon_bg">#fbcb43</color>
+    <color name="service_icon_bg">#ffa54f</color>
+    <color name="title_text_color">#ffffff</color>
+    <color name="main_verticalline_1">#ffffff</color>
+    <color name="main_verticalline_2">#c8f2f2</color>
+    <color name="hotel_manager_bg1">#ffffff</color>
+    <color name="hotel_manager_bg2">#fafafa</color>
+    <color name="hotel_manager_verticalline">#f2f2f2</color>
+    <color name="yellow_fb7600">#fb7600</color>
+    <color name="trans">#00000000</color>
+
+    <color name="canlendar_text_color">#323232</color>
+    <color name="grey_666666">#666666</color>
+    <color name="red_fd7b7b">#fd7b7b</color>
+    <color name="grey_cccccc">#cccccc</color>
+    <color name="hotel_manager_titel">#666666</color>
+    <color name="grey_f4f4f4">#f4f4f4</color>
+    <color name="black_333333">#333333</color>
+    <color name="red_ff5656">#ff5656</color>
+    <color name="yellow_ffb400">#ffb400</color>
+    <color name="grey_d8d8d8">#d8d8d8</color>
+    <color name="blue_5b5184">#5b5184</color>
+    <color name="red_ff4966">#ff4966</color>
+    <color name="black_cc000000">#cc000000</color>
+    <color name="blue_0091ff">#0091ff</color>
+    <color name="blue_514982">#514982</color>
+
+
+
+
+</resources>
