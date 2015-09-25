@@ -143,7 +143,7 @@ public class CarNearActivity extends CarBaseActivity {
         viewPager.setOffscreenPageLimit(3);
         viewPager.setOnPageChangeListener(new MyOnPageChangeListener());
         viewPager.setAdapter(new MyPagerAdapter());
-        viewPager.setCurrentItem(1);
+        viewPager.setCurrentItem(0);
     }
 
     public static int Dp2Px(Context context, float dp) {
