@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 白色，按下变灰 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- pressed -->
+    <item android:drawable="@color/gary_w" android:state_pressed="true"/>
+    <!-- focused -->
+    <item android:drawable="@color/gary_w" android:state_focused="true"/>
+    <!-- default -->
+    <item android:drawable="@color/white"/>
+
+</selector>

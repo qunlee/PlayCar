@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- view 工具面板 -->
+
+
+    <!-- 上拉下拉view -->
+
+    <include layout="@layout/wk_list_view_for_include" >
+    </include>
+
+</LinearLayout>

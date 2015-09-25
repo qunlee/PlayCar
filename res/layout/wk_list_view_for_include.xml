@@ -1,0 +1,16 @@
+<!-- 上拉下拉view -->
+<com.wk.libs.listview.PullToRefreshListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wk_pull_refresh_list"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:cacheColorHint="#00000000"
+    android:divider="@color/gary_w"
+    android:dividerHeight="0.5dp"
+    android:fadingEdge="none"
+    android:fastScrollEnabled="false"
+    android:footerDividersEnabled="false"
+    android:headerDividersEnabled="false"
+    android:listSelector="@drawable/wk_item_white_click_gary"
+    android:smoothScrollbar="true" >
+
+</com.wk.libs.listview.PullToRefreshListView>

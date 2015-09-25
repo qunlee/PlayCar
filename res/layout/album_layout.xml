@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- <cn.wk.libs4a.view.WKHeader
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:leftTxt="返回"
+        app:rightTxt="完成"
+        app:title="相册图集" >
+    </cn.wk.libs4a.view.WKHeader> -->
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:horizontalSpacing="20dp"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="20dp" >
+    </GridView>
+
+</LinearLayout>
