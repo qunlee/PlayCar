@@ -14,8 +14,9 @@
         android:minSdkVersion="9"
         android:targetSdkVersion="19" />
 
+        <!-- android:name="com.wqdsoft.im.map.BMapApiApp" -->
     <application
-        android:name="com.wqdsoft.im.map.BMapApiApp"
+        android:name="com.playcar.WKApplication"
         android:allowBackup="true"
         android:icon="@drawable/app_news_icon"
         android:label="@string/ochat_app_name"

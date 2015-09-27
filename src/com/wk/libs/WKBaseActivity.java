@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.playcar.R;
+import com.playcar.WKApplication;
 
 import net.tsz.afinal.FinalActivity;
 import android.app.Activity;

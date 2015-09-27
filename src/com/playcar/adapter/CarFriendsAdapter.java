@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.playcar.Beam.Friend;
+import com.playcar.bean.Friend;
 
 /**
  * Created by dan.liu on 9/24/15.

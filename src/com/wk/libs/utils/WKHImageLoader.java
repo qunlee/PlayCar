@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import com.itotem.imageloader.core.DisplayImageOptions;
 import com.itotem.imageloader.core.ImageLoader;
 import com.itotem.imageloader.core.assist.ImageLoadingListener;
-import com.wk.libs.WKApplication;
+import com.playcar.WKApplication;
 
 public class WKHImageLoader {
 	public ImageLoader loader;

@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 
 import com.playcar.R;
-import com.wk.libs.WKApplication;
+import com.playcar.WKApplication;
 import com.wk.libs.WKBaseActivity;
 
 import net.tsz.afinal.FinalDb;

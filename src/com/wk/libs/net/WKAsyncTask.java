@@ -2,7 +2,7 @@ package com.wk.libs.net;
 
 import java.lang.ref.WeakReference;
 
-import com.wk.libs.WKApplication;
+import com.playcar.WKApplication;
 import com.wk.libs.utils.WKProgressDlg;
 
 import android.content.Context;

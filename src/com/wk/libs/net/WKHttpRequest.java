@@ -29,7 +29,7 @@ import org.apache.http.HttpException;
 import org.apache.http.NameValuePair;
 import org.apache.http.protocol.HTTP;
 
-import com.wk.libs.WKApplication;
+import com.playcar.WKApplication;
 
 import android.content.Context;
 import android.text.TextUtils;

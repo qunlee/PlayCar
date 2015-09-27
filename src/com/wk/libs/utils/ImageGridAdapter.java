@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.playcar.R;
-import com.wk.libs.WKApplication;
+import com.playcar.WKApplication;
 
 import android.content.Context;
 import android.net.Uri;

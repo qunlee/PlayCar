@@ -3,7 +3,7 @@ package com.wk.libs.utils;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.wk.libs.WKApplication;
+import com.playcar.WKApplication;
 
 import android.app.Activity;
 import android.content.Context;

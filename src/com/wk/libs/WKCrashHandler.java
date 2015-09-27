@@ -6,6 +6,7 @@ import java.io.Writer;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import com.playcar.WKApplication;
 import com.wk.libs.net.WKAsyncTaskPro;
 
 import android.content.Context;

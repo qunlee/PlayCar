@@ -14,11 +14,12 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
+
 import com.hp.hpl.sparta.Text;
 import com.playcar.R;
-import com.playcar.Beam.TrandsBean;
-import com.playcar.Beam.TrandsBean.Trands;
 import com.playcar.activity.CarNearActivity;
+import com.playcar.bean.TrandsBean;
+import com.playcar.bean.TrandsBean.Trands;
 import com.wk.libs.listview.PullToRefreshListView;
 import com.wk.libs.listview.WKListViewInterface;
 import com.wk.libs.listview.WKListViewUtils;
@@ -54,12 +55,12 @@ public class CarNearTrandsFragment extends Fragment implements
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 	}
 
 	private void initList() {
-		PullToRefreshListView pList = (PullToRefreshListView) 
-				view.findViewById(R.id.wk_pull_refresh_list);
+		PullToRefreshListView pList = (PullToRefreshListView) view
+				.findViewById(R.id.wk_pull_refresh_list);
 		listUtils = new WKListViewUtils<Trands, TrandsBean>() {
 		};
 		listUtils.init(getActivity(), this, pList);
@@ -67,7 +68,9 @@ public class CarNearTrandsFragment extends Fragment implements
 		listUtils.pullRefreshListView.setOnItemClickListener(this);
 		listUtils.updateData();
 	}
+
 	View view;
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -76,8 +79,6 @@ public class CarNearTrandsFragment extends Fragment implements
 		initList();
 		return view;
 	}
-	
-	
 
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -143,21 +144,26 @@ public class CarNearTrandsFragment extends Fragment implements
 	@Override
 	public void getDataBack(String result, boolean isLocal) {
 		// TODO Auto-generated method stub
-//		Type cvbType = new TypeToken<BaseBean<TrandsBean>>() {
-//		}.getType();
-//		listUtils.bean = new Gson().fromJson(result, cvbType);
-//		listUtils.list.addAll(listUtils.bean.data.news);
-//		if (listUtils.list.size() > 0)
-//			listUtils.adapter.notifyDataSetChanged();
+		// Type cvbType = new TypeToken<BaseBean<TrandsBean>>() {
+		// }.getType();
+		// listUtils.bean = new Gson().fromJson(result, cvbType);
+		// listUtils.list.addAll(listUtils.bean.data.news);
+		// if (listUtils.list.size() > 0)
+		// listUtils.adapter.notifyDataSetChanged();
 		TrandsBean trandsBean = new TrandsBean();
+
+		Trands trands;
 		
-		Trands trands = trandsBean.new Trands();
+		for(int i = 0; i < 3; i ++) {
+			trands = trandsBean.new Trands();
+			trands.age = "14";
+			trands.name = "研儿";
+			trands.id = "01";
+			trands.content = "小软叫小软～";
+			listUtils.list.add(trands);
+		}
+
 		
-		trands.age = "14";
-		trands.name = "小软";
-		trands.id = "01";
-		trands.content = "小软叫小软～";
-		listUtils.list.add(trands);
 		listUtils.adapter.notifyDataSetChanged();
 	}
 
@@ -172,7 +178,7 @@ public class CarNearTrandsFragment extends Fragment implements
 		// TODO Auto-generated method stub
 		return R.layout.car_near_trands_list_item;
 	}
-	
+
 	class MyViewHolder extends WKViewHolder<Trands> {
 		TextView ageView;
 		TextView nameView;
@@ -186,10 +192,10 @@ public class CarNearTrandsFragment extends Fragment implements
 
 		@Override
 		public void setData(Trands t) {
-			ageView.setText(t.age);
-			nameView.setText(t.name);
-			contentView.setText(t.content);
-			
+//			ageView.setText(t.age);
+//			nameView.setText(t.name);
+//			contentView.setText(t.content);
+
 		}
 	}
 

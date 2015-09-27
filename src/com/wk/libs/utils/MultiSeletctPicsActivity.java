@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import com.playcar.R;
-import com.wk.libs.WKApplication;
+import com.playcar.WKApplication;
 import com.wk.libs.WKBaseActivity;
 import com.wk.libs.utils.ImageGridAdapter.TextCallback;
 

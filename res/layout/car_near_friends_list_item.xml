@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
-    android:padding="15dp">
+    android:padding="15dp" >
 
-    <ImageView
+    <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/car_near_friends_list_item_head"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_centerVertical="true"
-        android:src="@drawable/car_head_update_icon" />
+        app:placeholderImage="@color/gray"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundedCornerRadius="3dp" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@id/car_near_friends_list_item_head"
-        android:layout_centerVertical="true">
+        android:layout_toRightOf="@id/car_near_friends_list_item_head" >
 
         <TextView
             android:id="@+id/car_near_friends_list_item_name"
@@ -33,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/car_near_friends_list_item_name"
             android:layout_marginTop="5dp"
-            android:background="@drawable/car_sex_girl_bg"
+            android:background="@drawable/car_sex_female"
             android:gravity="right"
             android:paddingRight="2dp"
             android:text="20"
@@ -44,13 +46,12 @@
             android:id="@+id/car_near_friends_list_item_dis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/car_near_friends_list_item_sex"
             android:layout_marginTop="5dp"
             android:text="0.1km | 1分钟前"
             android:textColor="@color/grey_666666"
-            android:layout_below="@id/car_near_friends_list_item_sex"
             android:textSize="12sp" />
     </RelativeLayout>
-
 
     <TextView
         android:id="@+id/car_brand"
@@ -58,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:drawablePadding="10dp"
+        android:drawablePadding="5dp"
         android:drawableTop="@drawable/car_head_update_icon"
         android:gravity="center"
         android:text="宝马" />
