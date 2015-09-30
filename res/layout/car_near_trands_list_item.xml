@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingRight="15dp" >
+    android:background="@color/white"
+    android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:paddingRight="15dp" >
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/img"
@@ -62,9 +63,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:background="@drawable/car_sex_female"
-                android:text="24"
                 android:gravity="right|center_vertical"
                 android:paddingRight="2dp"
+                android:text="24"
                 android:textColor="@color/white"
                 android:textSize="10sp" />
         </LinearLayout>
@@ -73,14 +74,14 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginLeft="65dp"
+        android:layout_marginLeft="60dp"
         android:background="#eeeeee" />
 
     <TextView
         android:id="@+id/content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="65dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="5dp"
         android:text="我在这儿，你在哪里？"
         android:textColor="#202020" />
@@ -88,8 +89,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="65dp"
-        android:orientation="vertical" >
+        android:layout_marginLeft="60dp"
+        android:orientation="vertical"
+        android:paddingRight="15dp" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -134,5 +136,57 @@
                 app:placeholderImageScaleType="centerCrop" />
         </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="15dp" >
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="12.5km"
+            android:textColor="#bcbcbc"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/zan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="2 赞"
+            android:textColor="#bcbcbc"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/pinglun"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="5 评论"
+            android:textColor="#bcbcbc"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:background="@null"
+            android:padding="3dp"
+            android:src="@drawable/car_trands_ask" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/car_grouplist_item_divider" />
 
 </LinearLayout>

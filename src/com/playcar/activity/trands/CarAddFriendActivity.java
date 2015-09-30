@@ -1,9 +1,10 @@
-package com.playcar.activity;
+package com.playcar.activity.trands;
 
 import android.os.Bundle;
 import android.view.View;
 
 import com.playcar.R;
+import com.playcar.activity.CarBaseActivity;
 
 
 public class CarAddFriendActivity extends CarBaseActivity implements View.OnClickListener {

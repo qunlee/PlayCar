@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 import com.wk.libs.beans.BaseListBean;
 
+/**
+ * 群组——父类
+ * @author qunlee_mr
+ *
+ */
 public class GroupsBean extends BaseListBean {
 	
 	public ArrayList<GroupBean> groupList = new ArrayList<GroupsBean.GroupBean>();

@@ -15,6 +15,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
 import com.playcar.R;
+import com.playcar.activity.trands.CarAddFriendActivity;
 import com.playcar.fragment.CarFollowsFragment;
 import com.playcar.fragment.CarFriendsFragment;
 import com.playcar.view.MainViewPager;

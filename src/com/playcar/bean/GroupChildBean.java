@@ -1,5 +1,11 @@
 package com.playcar.bean;
 
+/**
+ * 群组——子类
+ * @author qunlee_mr
+ *
+ */
+
 public class GroupChildBean {
 	
 	public String id;

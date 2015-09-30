@@ -4,20 +4,25 @@ import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 import com.hp.hpl.sparta.Text;
 import com.playcar.R;
 import com.playcar.activity.CarNearActivity;
+import com.playcar.activity.trands.ActivityAddTrand;
+import com.playcar.activity.trands.ActivityTrandInfo;
 import com.playcar.bean.TrandsBean;
 import com.playcar.bean.TrandsBean.Trands;
 import com.wk.libs.listview.PullToRefreshListView;
@@ -58,17 +63,6 @@ public class CarNearTrandsFragment extends Fragment implements
 
 	}
 
-	private void initList() {
-		PullToRefreshListView pList = (PullToRefreshListView) view
-				.findViewById(R.id.wk_pull_refresh_list);
-		listUtils = new WKListViewUtils<Trands, TrandsBean>() {
-		};
-		listUtils.init(getActivity(), this, pList);
-		listUtils.setShowLoading(true);
-		listUtils.pullRefreshListView.setOnItemClickListener(this);
-		listUtils.updateData();
-	}
-
 	View view;
 
 	@Override
@@ -76,7 +70,6 @@ public class CarNearTrandsFragment extends Fragment implements
 			Bundle savedInstanceState) {
 		view = inflater.inflate(R.layout.car_near_trands_fragment, container,
 				false);
-		initList();
 		return view;
 	}
 
@@ -91,11 +84,19 @@ public class CarNearTrandsFragment extends Fragment implements
 		super.onActivityCreated(savedInstanceState);
 		final CarNearActivity activity = ((CarNearActivity) getActivity());
 		View fragmentView = activity.fragments.get(0).getView();
+		view = fragmentView;
+		initList();
 	}
 
-	@Override
-	public void onStart() {
-		super.onStart();
+	private void initList() {
+		PullToRefreshListView pList = (PullToRefreshListView) view
+				.findViewById(R.id.wk_pull_refresh_list);
+		listUtils = new WKListViewUtils<Trands, TrandsBean>() {
+		};
+		listUtils.init(getActivity(), this, pList);
+		listUtils.setShowLoading(true);
+		listUtils.pullRefreshListView.setOnItemClickListener(this);
+		listUtils.updateData();
 	}
 
 	@Override
@@ -104,35 +105,11 @@ public class CarNearTrandsFragment extends Fragment implements
 	}
 
 	@Override
-	public void onPause() {
-		super.onPause();
-	}
-
-	@Override
-	public void onStop() {
-		super.onStop();
-	}
-
-	@Override
-	public void onDestroyView() {
-		super.onDestroyView();
-	}
-
-	@Override
-	public void onDestroy() {
-		super.onDestroy();
-	}
-
-	@Override
-	public void onDetach() {
-		super.onDetach();
-	}
-
-	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
-		// TODO Auto-generated method stub
-
+		System.out.println("*******************************************");
+		Toast.makeText(getActivity(), "进入详情", Toast.LENGTH_SHORT).show();
+		startActivity(new Intent(getActivity(), ActivityTrandInfo.class));
 	}
 
 	@Override
@@ -153,8 +130,8 @@ public class CarNearTrandsFragment extends Fragment implements
 		TrandsBean trandsBean = new TrandsBean();
 
 		Trands trands;
-		
-		for(int i = 0; i < 3; i ++) {
+
+		for (int i = 0; i < 3; i++) {
 			trands = trandsBean.new Trands();
 			trands.age = "14";
 			trands.name = "研儿";
@@ -163,7 +140,6 @@ public class CarNearTrandsFragment extends Fragment implements
 			listUtils.list.add(trands);
 		}
 
-		
 		listUtils.adapter.notifyDataSetChanged();
 	}
 
@@ -180,21 +156,33 @@ public class CarNearTrandsFragment extends Fragment implements
 	}
 
 	class MyViewHolder extends WKViewHolder<Trands> {
+		View view;
 		TextView ageView;
 		TextView nameView;
 		TextView contentView;
 
 		public MyViewHolder(View view) {
-			ageView = (TextView) view.findViewById(R.id.age);
-			nameView = (TextView) view.findViewById(R.id.name);
-			contentView = (TextView) view.findViewById(R.id.content);
+			// ageView = (TextView) view.findViewById(R.id.age);
+			// nameView = (TextView) view.findViewById(R.id.name);
+			// contentView = (TextView) view.findViewById(R.id.content);
+
+			this.view = view;
 		}
 
 		@Override
 		public void setData(Trands t) {
-//			ageView.setText(t.age);
-//			nameView.setText(t.name);
-//			contentView.setText(t.content);
+			// ageView.setText(t.age);
+			// nameView.setText(t.name);
+			// contentView.setText(t.content);
+			this.view.setOnClickListener(new OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					startActivity(new Intent(getActivity(),
+							ActivityTrandInfo.class));
+				}
+			});
 
 		}
 	}

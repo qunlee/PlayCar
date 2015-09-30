@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.playcar.R;
+import com.playcar.activity.trands.CarAddFriendActivity;
 
 
 public class CarPersonCenterActivity extends CarBaseActivity implements View.OnClickListener {

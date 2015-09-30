@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:orientation="horizontal"
+    android:paddingRight="15dp" >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:padding="3dp"
+        android:scaleType="centerCrop"
+        app:placeholderImage="@color/gray"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundedCornerRadius="3dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="研儿"
+                android:textColor="#646464" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="1分钟前"
+                android:textColor="#cdcdcd"
+                android:textSize="11sp" />
+        </RelativeLayout>
+        <!-- android:background="@drawable/car_trands_pen_border"car_sex_girl_bg -->
+
+        <TextView
+            android:id="@+id/review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="right|center_vertical"
+            android:paddingRight="2dp"
+            android:text="好棒棒 !"
+            android:textColor="#595959"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

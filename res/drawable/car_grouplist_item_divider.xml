@@ -12,10 +12,10 @@
 
     <!-- 此处定义只有上下两边有边框 高度为1像素 -->
     <item
-        android:bottom="0.1dp"
-        android:top="0.1dp">
+        android:bottom="1dp"
+        android:top="1dp">
 
-        <!-- 边框里面背景颜色 白色 -->
+        <!-- 边框里面背景颜色 -->
         <shape>
             <solid android:color="#f7f7f7" />
         </shape>

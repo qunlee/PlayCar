@@ -1011,7 +1011,11 @@
         <activity android:name=".activity.CarClubActivity"/>
         <activity android:name=".activity.CarFindActivity"/>
         <activity android:name=".activity.CarPushMessageActivity"/>
-        <activity android:name=".activity.CarAddFriendActivity"/>
+        <activity android:name="com.playcar.activity.trands.CarAddFriendActivity"/>
+        
+        <activity android:name="com.playcar.activity.trands.ActivityAddTrand"/>
+        <activity android:name="com.playcar.activity.trands.ActivityTrandInfo"/>
+        <activity android:name="com.playcar.activity.trands.ActivityLocal"/>
 
 
         <service

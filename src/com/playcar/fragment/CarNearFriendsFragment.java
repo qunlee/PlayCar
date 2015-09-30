@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Toast;
 
 import com.playcar.R;
 import com.playcar.activity.CarNearActivity;
@@ -60,6 +61,25 @@ public class CarNearFriendsFragment extends Fragment implements
 
 	}
 
+	View view;
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		view = inflater.inflate(R.layout.car_near_trands_fragment, container,
+				false);
+		return view;
+	}
+
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		final CarNearActivity activity = ((CarNearActivity) getActivity());
+		View fragmentView = activity.fragments.get(1).getView();
+		view = fragmentView;
+		initList();
+	}
+
 	private void initList() {
 		PullToRefreshListView pList = (PullToRefreshListView) view
 				.findViewById(R.id.wk_pull_refresh_list);
@@ -71,64 +91,16 @@ public class CarNearFriendsFragment extends Fragment implements
 		listUtils.updateData();
 	}
 
-	View view;
-
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		view = inflater.inflate(R.layout.car_near_trands_fragment, container,
-				false);
-		initList();
-		return view;
-	}
-
-	@Override
-	public void onActivityCreated(Bundle savedInstanceState) {
-		super.onActivityCreated(savedInstanceState);
-		final CarNearActivity activity = ((CarNearActivity) getActivity());
-		View fragmentView = activity.fragments.get(1).getView();
-	}
-
-	@Override
-	public void onStart() {
-		super.onStart();
-	}
-
 	@Override
 	public void onResume() {
 		super.onResume();
 	}
 
 	@Override
-	public void onPause() {
-		super.onPause();
-	}
-
-	@Override
-	public void onStop() {
-		super.onStop();
-	}
-
-	@Override
-	public void onDestroyView() {
-		super.onDestroyView();
-	}
-
-	@Override
-	public void onDestroy() {
-		super.onDestroy();
-	}
-
-	@Override
-	public void onDetach() {
-		super.onDetach();
-	}
-
-	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
 		// TODO Auto-generated method stub
-
+		Toast.makeText(getActivity(), "???!!!", Toast.LENGTH_SHORT).show();
 	}
 
 	@Override

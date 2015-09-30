@@ -32,6 +32,7 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.playcar.R;
+import com.playcar.activity.trands.ActivityAddTrand;
 import com.playcar.fragment.CarNearFriendsFragment;
 import com.playcar.fragment.CarNearGroupFragment;
 import com.playcar.fragment.CarNearTrandsFragment;
@@ -129,18 +130,21 @@ public class CarNearActivity extends CarBaseActivity {
 		right_btn1.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(mContext, "添加", Toast.LENGTH_LONG).show();
+//				动态——添加动态
+				startActivity(new Intent(mContext, ActivityAddTrand.class));
 			}
 		});
 		right_btn2.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+//				动态——筛选
 				Toast.makeText(mContext, "筛选", Toast.LENGTH_LONG).show();
 			}
 		});
 		right_btn3.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+//				群组——创建
 				Toast.makeText(mContext, "创建", Toast.LENGTH_LONG).show();
 			}
 		});

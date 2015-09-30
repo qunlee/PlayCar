@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/order_list_tab"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue_5b5184"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:drawableLeft="@drawable/car_back_point"
+            android:drawablePadding="5dp"
+            android:onClick="onClick"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="动态详情"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/attention_btn"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:onClick="onClick"
+            android:text="关注她"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="15dp" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:padding="3dp"
+            android:scaleType="centerCrop"
+            app:placeholderImage="@color/gray"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundedCornerRadius="3dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="研儿"
+                    android:textColor="#646464" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="1分钟前"
+                    android:textColor="#cacaca"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+            <!-- android:background="@drawable/car_trands_pen_border"car_sex_girl_bg -->
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/car_sex_female"
+                android:gravity="right|center_vertical"
+                android:paddingRight="2dp"
+                android:text="24"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="60dp"
+        android:background="#eeeeee" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="5dp"
+        android:text="我在这儿，你在哪里？"
+        android:textColor="#202020" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:orientation="vertical"
+        android:paddingRight="15dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/photo"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerCrop"
+                app:placeholderImage="@color/gray"
+                app:placeholderImageScaleType="centerCrop" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/photo1"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerCrop"
+                app:placeholderImage="@color/gray"
+                app:placeholderImageScaleType="centerCrop" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/photo2"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerCrop"
+                app:placeholderImage="@color/gray"
+                app:placeholderImageScaleType="centerCrop" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/photo3"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerCrop"
+                app:placeholderImage="@color/gray"
+                app:placeholderImageScaleType="centerCrop" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="15dp" >
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="12.5km"
+            android:textColor="#bcbcbc"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/zan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="2 赞"
+            android:textColor="#bcbcbc"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/pinglun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="5 评论"
+            android:textColor="#bcbcbc"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:background="@null"
+            android:onClick="onClick"
+            android:padding="3dp"
+            android:src="@drawable/car_trands_ask" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eeeeee" />
+    <!--
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+    -->
+
+    <ListView
+        android:id="@+id/review_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7f7"
+        android:divider="#eeeeee"
+        android:dividerHeight="1dp" >
+    </ListView>
+
+</LinearLayout>
