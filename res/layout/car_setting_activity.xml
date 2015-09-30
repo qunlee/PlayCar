@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_groundback"
+    android:orientation="vertical" >
+
+    <com.playcar.view.HeadView style="@style/head_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="帐号与安全"
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            style="@style/txt_13size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawablePadding="10dip"
+            android:drawableRight="@drawable/arrows_right"
+            android:gravity="center_vertical|right"
+            android:padding="10dip"
+            android:text="帐号安全等级低"
+            android:textColor="@color/color_999999" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="隐身模式"
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            style="@style/txt_13size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawablePadding="10dip"
+            android:drawableRight="@drawable/arrows_right"
+            android:gravity="center_vertical|right"
+            android:padding="10dip"
+            android:textColor="@color/color_999999" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="1dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="消息提醒"
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            style="@style/txt_13size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawablePadding="1dip"
+            android:drawableRight="@drawable/arrows_right"
+            android:gravity="center_vertical|right"
+            android:padding="10dip"
+            android:text="已关闭"
+            android:textColor="@color/color_999999" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/txt_14size_singline_nomal"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip"
+        android:background="@android:color/white"
+        android:drawableRight="@drawable/arrows_right"
+        android:gravity="center_vertical"
+        android:minEms="5"
+        android:padding="10dip"
+        android:text="黑名单"
+        android:textColor="@color/color_333333" />
+
+    <TextView
+        style="@style/txt_14size_singline_nomal"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip"
+        android:background="@android:color/white"
+        android:drawableRight="@drawable/arrows_right"
+        android:gravity="center_vertical"
+        android:minEms="5"
+        android:padding="10dip"
+        android:text="关于"
+        android:textColor="@color/color_333333" />
+
+    <TextView
+        style="@style/txt_14size_singline_nomal"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip"
+        android:background="@android:color/white"
+        android:drawableRight="@drawable/arrows_right"
+        android:gravity="center_vertical"
+        android:minEms="5"
+        android:padding="10dip"
+        android:text="退出当前帐号"
+        android:textColor="@color/color_333333" />
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/main_groundback">
+	<TextView
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    style="@style/txt_13size_singline_nomal"
+	    android:textColor="@color/color_333333"
+	    android:padding="10dip"
+	    android:text="3个好友待添加"/>		<RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:background="@android:color/white">
+		    <ListView 
+		        android:id="@+id/listView"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"/>
+		</RelativeLayout>	
+</LinearLayout>

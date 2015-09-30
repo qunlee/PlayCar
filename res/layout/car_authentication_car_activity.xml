@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_groundback"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:text="手机号"
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            android:id="@+id/txt_phoneNumber"
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/arrows_right"
+            android:gravity="center_vertical|right"
+            android:padding="10dip"
+            android:text="18678905578"
+            android:textColor="@color/color_333333" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:text="车型"
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/arrows_right"
+            android:gravity="center_vertical|right"
+            android:padding="10dip"
+            android:textColor="@color/color_333333" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:text="车牌号"
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/arrows_right"
+            android:gravity="center_vertical|right"
+            android:padding="10dip"
+            android:text="浙A34567"
+            android:textColor="@color/color_333333" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:text="行驶证"
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/arrows_right"
+            android:gravity="center_vertical|right"
+            android:padding="10dip"
+            android:textColor="@color/color_333333" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:padding="10dip" >
+
+        <Button
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:background="@drawable/back_fillet_white_shape"
+            android:text="立即认证" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/txt_12size_nomal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="玩车车不会在任何地方泄漏您的信息"
+        android:gravity="center_horizontal"
+        android:textColor="@color/color_999999" />
+
+</LinearLayout>

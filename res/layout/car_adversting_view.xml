@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.playcar.view.adversiting.AutoScrollViewPager
+        android:id="@+id/view_pager_advertising"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.playcar.view.adversiting.AutoScrollViewPager>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <com.playcar.view.adversiting.AdvertisingCricle
+            android:id="@+id/advertising_Cricle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="5dip" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_pic_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="#4c4c4c"
+        android:paddingBottom="5dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:paddingTop="5dp"
+        android:text="共0张"
+        android:visibility="invisible" />
+
+</RelativeLayout>

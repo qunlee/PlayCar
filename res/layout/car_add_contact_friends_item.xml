@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nomal" />
+
+        <com.playcar.view.roundedimageview.RoundedImageView
+            android:id="@+id/imageView1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/car"
+            app:riv_border_color="@color/color_cccccc"
+            app:riv_corner_radius="5dip"
+            app:riv_oval="false" />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/txt_13size_singline_nomal"
+            android:textColor="@color/color_333333"
+            android:layout_marginLeft="10dip"
+            android:paddingTop="5dip"
+            android:gravity="top|left"
+            android:text="angle萍儿"/>
+    </LinearLayout>
+
+</LinearLayout>

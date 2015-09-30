@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_groundback"
+    android:orientation="vertical" >
+	<com.playcar.view.HeadView
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dip"
+        android:background="@drawable/car"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="检测新版本"
+            android:textColor="@color/color_333333" />
+
+        <TextView
+            style="@style/txt_13size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawablePadding="10dip"
+            android:drawableRight="@drawable/arrows_right"
+            android:gravity="center_vertical|right"
+            android:padding="10dip"
+            android:text="版本23.0.09"
+            android:textColor="@color/color_999999" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/txt_14size_singline_nomal"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="1dip"
+        android:background="@android:color/white"
+        android:drawableRight="@drawable/arrows_right"
+        android:gravity="center_vertical"
+        android:minEms="5"
+        android:padding="10dip"
+        android:text="玩车车平台行为规范"
+        android:textColor="@color/color_333333" />
+
+</LinearLayout>

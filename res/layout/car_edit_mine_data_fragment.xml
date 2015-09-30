@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_groundback"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="昵称"
+            android:textColor="@color/color_999999" />
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="@color/color_333333" 
+            android:drawableRight="@drawable/arrows_right"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="年龄"
+            android:textColor="@color/color_999999" />
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="@color/color_333333" 
+            android:drawableRight="@drawable/arrows_right"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="语音介绍"
+            android:textColor="@color/color_999999" />
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="@color/color_333333" 
+            android:drawableRight="@drawable/arrows_right"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="个性签名"
+            android:textColor="@color/color_999999" />
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="@color/color_2195f2"
+            android:text="填写个性签名"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/arrows_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="情感状态"
+            android:textColor="@color/color_999999" />
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="@color/color_333333"
+            android:drawableRight="@drawable/arrows_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="职业"
+            android:textColor="@color/color_999999" />
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="@color/color_333333" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="公司"
+            android:textColor="@color/color_999999" />
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="@color/color_333333" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="所在地"
+            android:textColor="@color/color_999999" />
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="@color/color_333333" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="注册日期"
+            android:textColor="@color/color_999999" />
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:textColor="@color/color_333333" />
+    </LinearLayout>
+
+</LinearLayout>
