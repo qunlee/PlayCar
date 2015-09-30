@@ -8,6 +8,7 @@ import android.widget.RadioButton;
 import android.widget.TabHost;
 
 import com.playcar.R;
+import com.playcar.activity.mine.CarMineActivity;
 
 
 
@@ -85,7 +86,7 @@ public class CarMainActivity extends TabActivity implements CompoundButton.OnChe
         tabSpec1.setContent(intent);
         mHost.addTab(tabSpec1);
 
-        intent = new Intent(CarMainActivity.this, CarPersonCenterActivity.class);
+        intent = new Intent(CarMainActivity.this, CarMineActivity.class);
         TabHost.TabSpec tabSpec3 = mHost.newTabSpec("myown");
         tabSpec3.setIndicator(getString(R.string.fifth_tab), getResources().getDrawable(R.drawable.ic_launcher));
         tabSpec3.setContent(intent);

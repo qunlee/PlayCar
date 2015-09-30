@@ -133,7 +133,19 @@
     <color name="blue_0091ff">#0091ff</color>
     <color name="blue_514982">#514982</color>
 
-
-
+<!-- moujunfeng -->
+    <color name="main_groundback">#f7f7f7</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#333333</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_464046">#464046</color>
+    <color name="color_2195f2">#2195f2</color>
+    <color name="color_fe94ab">#fe94ab</color>
+    <color name="color_514982">#514982</color>
+    <color name="color_5c5293">#5c5293</color>
+    <color name="color_f43a21">#f43a21</color>
+    <color name="color_306ec5">#306ec5</color>
+    <color name="color_5b5184">#5b5184</color>
 
 </resources>

@@ -14,7 +14,7 @@
         android:minSdkVersion="9"
         android:targetSdkVersion="19" />
 
-        <!-- android:name="com.wqdsoft.im.map.BMapApiApp" -->
+    <!-- android:name="com.wqdsoft.im.map.BMapApiApp" -->
     <application
         android:name="com.playcar.WKApplication"
         android:allowBackup="true"
@@ -24,8 +24,8 @@
         <activity
             android:name="com.wqdsoft.im.WelcomeActivity"
             android:configChanges="locale|orientation"
-            android:screenOrientation="portrait"
-            android:label="@string/ochat_app_name" >
+            android:label="@string/ochat_app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN" />
@@ -34,9 +34,25 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.playcar.activity.mine.CarMineActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarSettingActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarAddFriendsActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarMineInfoActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
             android:name="com.wqdsoft.im.LoginTypeActivity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
@@ -57,9 +73,9 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ForgetPwdActity"
-             android:configChanges="locale|orientation"
-              android:screenOrientation="portrait"
-            android:label="@string/ochat_app_name" >
+            android:configChanges="locale|orientation"
+            android:label="@string/ochat_app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
@@ -67,25 +83,25 @@
         <activity
             android:name="com.wqdsoft.im.LoginActivity"
             android:configChanges="locale|orientation"
-             android:screenOrientation="portrait"
-            android:label="@string/ochat_app_name">
+            android:label="@string/ochat_app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.wqdsoft.im.RegisterActivity"
-              android:configChanges="locale|orientation"
-            android:screenOrientation="portrait"
-            android:label="@string/ochat_app_name" >
+            android:configChanges="locale|orientation"
+            android:label="@string/ochat_app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.wqdsoft.im.UserProtocolActivity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-               android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
@@ -94,8 +110,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.CompleteUserInfoActvity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-               android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
@@ -104,8 +120,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.WriteUserInfoActivity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-              android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -126,8 +142,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ChatsTab"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
@@ -136,8 +152,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.MyGroupListActivity"
-            android:label="@string/ochat_app_name"
             android:configChanges="locale|orientation"
+            android:label="@string/ochat_app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -146,8 +162,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ServiceListActivity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -156,8 +172,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ContactsTab"
-            android:label="@string/ochat_app_name"
             android:configChanges="locale|orientation"
+            android:label="@string/ochat_app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
@@ -166,8 +182,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.FindTab"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -176,8 +192,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ProfileTab"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
@@ -186,8 +202,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.SettingTab"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -196,17 +212,17 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ScanResultActivity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.wqdsoft.im.CaptureActivity"
-              android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:windowSoftInputMode="stateAlwaysHidden" >
             <intent-filter>
@@ -224,8 +240,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.LocationActivity"
-            android:label="@string/ochat_app_name"
             android:configChanges="locale|orientation"
+            android:label="@string/ochat_app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -234,8 +250,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ContactAddrActivity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -244,8 +260,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ContactNameActivity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -254,8 +270,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ContactPinLiActivity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -264,8 +280,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ContactAddTimeActivity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -274,8 +290,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ContactProjectActivity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -284,8 +300,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ContactSubjectActivity"
-            android:label="@string/ochat_app_name"
             android:configChanges="locale|orientation"
+            android:label="@string/ochat_app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -294,8 +310,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.UserInfoActivity"
-            android:label="@string/ochat_app_name"
             android:configChanges="locale|orientation"
+            android:label="@string/ochat_app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -315,8 +331,8 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.RotateImageActivity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
@@ -325,15 +341,14 @@
         </activity>
         <activity
             android:name="com.wqdsoft.im.ShowImageActivity"
+            android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:configChanges="locale|orientation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateUnchanged" >
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-      
         <activity
             android:name="com.wqdsoft.im.CommodityActivity"
             android:configChanges="locale|orientation"
@@ -453,7 +468,6 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-       
         <activity
             android:name="com.wqdsoft.im.AddPersonActivity"
             android:configChanges="locale|orientation"
@@ -851,7 +865,6 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-       
         <activity
             android:name="com.wqdsoft.im.CardUserDetailActivity"
             android:configChanges="locale|orientation"
@@ -893,8 +906,8 @@
             android:name="com.wqdsoft.im.FriendsLoopDetailActivity"
             android:configChanges="locale|orientation"
             android:label="@string/ochat_app_name"
-             android:windowSoftInputMode="stateUnchanged|adjustResize"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnchanged|adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
@@ -1002,21 +1015,19 @@
                 <action android:name="android.intent.action.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.CarMainActivity"/>
-	    <activity android:name=".activity.CarPersonCenterActivity"/>
-        <activity android:name=".activity.CarNearActivity"/>
-        <activity android:name=".activity.CarPersonInfoActivity"/>
-        <activity android:name=".activity.CarSettingActivity"/>
-        <activity android:name=".activity.CarFriendsActivity"/>
-        <activity android:name=".activity.CarClubActivity"/>
-        <activity android:name=".activity.CarFindActivity"/>
-        <activity android:name=".activity.CarPushMessageActivity"/>
-        <activity android:name="com.playcar.activity.trands.CarAddFriendActivity"/>
-        
-        <activity android:name="com.playcar.activity.trands.ActivityAddTrand"/>
-        <activity android:name="com.playcar.activity.trands.ActivityTrandInfo"/>
-        <activity android:name="com.playcar.activity.trands.ActivityLocal"/>
-
+        <activity android:name=".activity.CarMainActivity" />
+        <activity android:name=".activity.CarPersonCenterActivity" />
+        <activity android:name=".activity.CarNearActivity" />
+        <activity android:name=".activity.CarPersonInfoActivity" />
+        <activity android:name=".activity.CarSettingActivity" />
+        <activity android:name=".activity.CarFriendsActivity" />
+        <activity android:name=".activity.CarClubActivity" />
+        <activity android:name=".activity.CarFindActivity" />
+        <activity android:name=".activity.CarPushMessageActivity" />
+        <activity android:name="com.playcar.activity.trands.CarAddFriendActivity" />
+        <activity android:name="com.playcar.activity.trands.ActivityAddTrand" />
+        <activity android:name="com.playcar.activity.trands.ActivityTrandInfo" />
+        <activity android:name="com.playcar.activity.trands.ActivityLocal" />
 
         <service
             android:name="com.wqdsoft.im.service.SnsService"
@@ -1087,7 +1098,5 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <!-- 摇一摇需要的权限 -->
     <uses-permission android:name="android.hardware.sensor.accelerometer" />
-
-    
 
 </manifest>
