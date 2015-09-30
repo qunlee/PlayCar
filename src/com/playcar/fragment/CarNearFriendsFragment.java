@@ -1,6 +1,7 @@
 package com.playcar.fragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.playcar.R;
 import com.playcar.activity.CarNearActivity;
+import com.playcar.activity.friends.ActivityFriendInfo;
 import com.playcar.bean.TrandsBean;
 import com.playcar.bean.TrandsBean.Trands;
 import com.playcar.fragment.CarNearTrandsFragment.MyViewHolder;
@@ -100,7 +102,7 @@ public class CarNearFriendsFragment extends Fragment implements
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
 		// TODO Auto-generated method stub
-		Toast.makeText(getActivity(), "???!!!", Toast.LENGTH_SHORT).show();
+		startActivity(new Intent(mActivity, ActivityFriendInfo.class));
 	}
 
 	@Override

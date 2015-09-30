@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import net.tsz.afinal.FinalDb;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
@@ -99,7 +98,6 @@ public class WKApplication extends Application {
 	public WKHImageLoader imageLoader = null;
 	public DisplayImageOptions options;
 	public DisplayImageOptions options2; // 不带缓存的配置
-	public FinalDb db = null;
 
 	private DisplayMetrics dm = null;
 	private InputMethodManager imm = null;
@@ -130,7 +128,6 @@ public class WKApplication extends Application {
 
 		WKSharedPreferencesUtil.init(getApplicationContext());
 		sp = WKSharedPreferencesUtil.getInstance();
-		db = FinalDb.create(this);
 		takePhoto = new WKTakePhotoUtils();
 		takePhoto.initApp(this);
 		if (isSetCrashHandler) {
@@ -138,22 +135,6 @@ public class WKApplication extends Application {
 			crashHandler.init(this);
 		}
 
-		// 每次启动读取登录信息
-		ArrayList<UserInfoGsonBean> userList = (ArrayList<UserInfoGsonBean>) db
-				.findAll(UserInfoGsonBean.class);
-		ArrayList<LogInfoGsonBean> loginfoList = (ArrayList<LogInfoGsonBean>) db
-				.findAll(LogInfoGsonBean.class);
-		if (userList != null && userList.size() > 0) {
-			user = userList.get(0);
-			loginfo = loginfoList.get(0);
-			if (user == null) {
-				user = new UserInfoGsonBean();
-			}
-			if (loginfo == null) {
-				loginfo = new LogInfoGsonBean();
-			}
-		}
-		
 		Fresco.initialize(this);
 
 	}

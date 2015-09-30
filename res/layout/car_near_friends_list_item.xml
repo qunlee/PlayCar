@@ -36,7 +36,7 @@
             android:layout_below="@id/car_near_friends_list_item_name"
             android:layout_marginTop="5dp"
             android:background="@drawable/car_sex_female"
-            android:gravity="right"
+            android:gravity="right|center_vertical"
             android:paddingRight="2dp"
             android:text="20"
             android:textColor="@color/white"

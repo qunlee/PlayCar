@@ -1016,6 +1016,7 @@
         <activity android:name="com.playcar.activity.trands.ActivityAddTrand"/>
         <activity android:name="com.playcar.activity.trands.ActivityTrandInfo"/>
         <activity android:name="com.playcar.activity.trands.ActivityLocal"/>
+        <activity android:name="com.playcar.activity.friends.ActivityFriendInfo"/>
 
 
         <service
