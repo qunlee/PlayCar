@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_groundback"
+    android:orientation="vertical" >
+
+    <com.playcar.view.HeadView style="@style/head_view" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+
+        <TextView
+            style="@style/txt_12size_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dip"
+            android:drawableTop="@drawable/phone"
+            android:gravity="center_horizontal"
+            android:text="添加通讯录好友"
+            android:textColor="@color/color_999999" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip" >
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:background="@color/color_cccccc" />
+        </RelativeLayout>
+
+        <TextView
+            style="@style/txt_12size_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dip"
+            android:drawableTop="@drawable/wechat"
+            android:gravity="center_horizontal"
+            android:text="添加微信好友"
+            android:textColor="@color/color_999999" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip" >
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="match_parent"
+                android:background="@color/color_cccccc" />
+        </RelativeLayout>
+
+        <TextView
+            style="@style/txt_12size_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="10dip"
+            android:drawableTop="@drawable/qq"
+            android:gravity="center_horizontal"
+            android:text="添加QQ好友"
+            android:textColor="@color/color_999999" />
+    </LinearLayout>
+
+</LinearLayout>

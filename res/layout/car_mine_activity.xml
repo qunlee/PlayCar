@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_groundback"
+    android:orientation="vertical" >
+
+    <com.playcar.view.HeadView
+        style="@style/head_view"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layout_mine_top"
+                android:layout_width="match_parent"
+                android:layout_height="214dip"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_add_friends"
+                style="@style/txt_12size_nomal"
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:background="@android:color/white"
+                android:drawableRight="@drawable/arrows_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="添加好友"
+                android:textColor="@color/color_333333" />
+
+            <LinearLayout
+                android:id="@+id/layout_carAndDynamic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_setting"
+                style="@style/txt_12size_nomal"
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginTop="8dip"
+                android:background="@android:color/white"
+                android:drawableRight="@drawable/arrows_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="设置"
+                android:textColor="@color/color_333333" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

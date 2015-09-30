@@ -391,5 +391,20 @@ public class BaseActivity extends FragmentActivity implements OnClickListener{
 		}
 	}
 	
+	public boolean isLogin(){
+		return true;
+	}
+	/**
+	 * 登录后的跳转界面
+	 */
+	public void openActivityAfterLogin(Intent intent){
+		if(isLogin()){
+			startActivity(intent);
+		}
+	}
+	public void openActivity(Intent intent){
+		startActivity(intent);
+	}
+	
 	
 }

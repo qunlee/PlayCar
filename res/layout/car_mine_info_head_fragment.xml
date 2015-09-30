@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.cn.playcarmineandmessagelibrary.view.percentlayout.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        app:layout_heightPercent="56.25%w" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/car" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip" >
+
+            <TextView
+                android:id="@+id/txt_back"
+                style="@style/txt_12size_nomal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/btn_back"
+                android:drawablePadding="2dip"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dip"
+                android:text="返回"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/txt_right"
+                style="@style/txt_12size_nomal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:paddingRight="10dip"
+                android:text="编辑"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dip" >
+
+            <com.cn.playcarmineandmessagelibrary.view.HorizontalListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.cn.playcarmineandmessagelibrary.view.percentlayout.PercentLinearLayout>

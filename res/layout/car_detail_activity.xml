@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.playcar.view.percentlayout.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_groundback"
+    android:orientation="vertical" >
+
+    <com.playcar.view.adversiting.AdvertisingView
+        android:layout_width="match_parent"
+        app:layout_heightPercent="56.25%w" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_marginTop="1dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="车型"
+            android:textColor="@color/color_999999" />
+
+        <ImageView
+            android:layout_width="60dip"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/car" />
+
+        <TextView
+            style="@style/txt_13size_singline_nomal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawablePadding="1dip"
+            android:gravity="center_vertical|left"
+            android:padding="10dip"
+            android:text="兰博基尼"
+            android:textColor="@color/color_333333" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_marginTop="2dip"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="认证状态"
+            android:textColor="@color/color_999999" />
+
+        <TextView
+            style="@style/txt_13size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/authen_nomal"
+            android:drawablePadding="1dip"
+            android:gravity="center_vertical|left"
+            android:padding="10dip"
+            android:text="未认证"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dip"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+
+        <TextView
+            style="@style/txt_14size_singline_nomal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:minEms="5"
+            android:padding="10dip"
+            android:text="爱车参数"
+            android:textColor="@color/color_999999" />
+
+        <com.playcar.view.MyListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip">
+        <Button 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/txt_13size_singline_nomal"
+            android:textColor="@android:color/white"
+            android:background="@drawable/blue_fillet_blue_shape"
+            android:text="立即认证"/>
+    </RelativeLayout>
+
+</com.playcar.view.percentlayout.PercentLinearLayout>

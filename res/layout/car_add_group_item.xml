@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <com.playcar.view.roundedimageview.RoundedImageView
+            android:id="@+id/imageView1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/car"
+            app:riv_border_color="@color/color_cccccc"
+            app:riv_corner_radius="5dip"
+            app:riv_oval="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="5dip" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/txt_14size_singline_nomal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="angle萍儿"
+                    android:textColor="@color/color_333333" />
+                <TextView
+                    style="@style/txt_12size_nomal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/man"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="5dip"
+                    android:text="24"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/txt_12size_nomal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="报以创意 3.25km"
+                android:textColor="@color/color_999999" />
+
+            <TextView
+                style="@style/txt_12size_nomal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="路见不平一声吼啊"
+                android:textColor="@color/color_999999" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

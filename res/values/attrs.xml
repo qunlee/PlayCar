@@ -98,6 +98,57 @@
         <attr name="state_range_last" format="boolean" />
         <attr name="state_highlighted" format="boolean" />
     </declare-styleable>
+    
+    <!-- moujunfeng -->
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+     <declare-styleable name="RoundedImageView">
+    <attr name="riv_corner_radius" format="dimension" />
+    <attr name="riv_corner_radius_top_left" format="dimension" />
+    <attr name="riv_corner_radius_top_right" format="dimension" />
+    <attr name="riv_corner_radius_bottom_left" format="dimension" />
+    <attr name="riv_corner_radius_bottom_right" format="dimension" />
+    <attr name="riv_border_width" format="dimension" />
+    <attr name="riv_border_color" format="color" />
+    <attr name="riv_mutate_background" format="boolean" />
+    <attr name="riv_oval" format="boolean" />
+    <attr name="android:scaleType" />
+    <attr name="riv_tile_mode">
+      <enum name="clamp" value="0" />
+      <enum name="repeat" value="1" />
+      <enum name="mirror" value="2" />
+    </attr>
+    <attr name="riv_tile_mode_x">
+      <enum name="clamp" value="0" />
+      <enum name="repeat" value="1" />
+      <enum name="mirror" value="2" />
+    </attr>
+    <attr name="riv_tile_mode_y">
+      <enum name="clamp" value="0" />
+      <enum name="repeat" value="1" />
+      <enum name="mirror" value="2" />
+    </attr>
+  </declare-styleable>
+  <declare-styleable name="PercentLayout_Layout">
+        <attr name="layout_widthPercent" format="string" />
+        <attr name="layout_heightPercent" format="string" />
+        <attr name="layout_marginPercent" format="string" />
+        <attr name="layout_marginLeftPercent" format="string" />
+        <attr name="layout_marginTopPercent" format="string" />
+        <attr name="layout_marginRightPercent" format="string" />
+        <attr name="layout_marginBottomPercent" format="string" />
+        <attr name="layout_marginStartPercent" format="string" />
+        <attr name="layout_marginEndPercent" format="string" />
+        <attr name="layout_textSizePercent" format="string" />
+        <attr name="layout_maxWidthPercent" format="string" />
+        <attr name="layout_maxHeightPercent" format="string" />
+        <attr name="layout_minWidthPercent" format="string" />
+        <attr name="layout_minHeightPercent" format="string" />
+    </declare-styleable>
 
 
 </resources>
