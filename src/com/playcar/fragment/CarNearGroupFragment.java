@@ -1,6 +1,7 @@
 package com.playcar.fragment;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import com.playcar.R;
 import com.playcar.activity.CarNearActivity;
+import com.playcar.activity.group.ActivityGroupInfo;
 import com.playcar.bean.GroupChildBean;
 import com.playcar.bean.GroupsBean;
 import com.playcar.bean.TrandsBean;
@@ -92,6 +94,7 @@ public class CarNearGroupFragment extends Fragment {
 				 child_childId = childPosition;
 				// 刷新界面
 				((BaseExpandableListAdapter) adapter).notifyDataSetChanged();
+				startActivity(new Intent(mActivity, ActivityGroupInfo.class));
 				return false;
 			}
 		});
@@ -292,7 +295,7 @@ public class CarNearGroupFragment extends Fragment {
 		 */
 		@Override
 		public boolean isChildSelectable(int groupPosition, int childPosition) {
-			Toast.makeText(mActivity, groupPosition + " : " + childPosition, Toast.LENGTH_SHORT).show();
+//			Toast.makeText(mActivity, groupPosition + " : " + childPosition, Toast.LENGTH_SHORT).show();
 			return true;
 		}
 

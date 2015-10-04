@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/order_list_tab"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue_5b5184"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:drawableLeft="@drawable/car_back_point"
+            android:drawablePadding="5dp"
+            android:onClick="onClick"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/group_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="交友"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/commit_btn"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:onClick="onClick"
+            android:text="设置"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@color/gary_ava"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/car_img" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="5dp"
+                            app:placeholderImage="@color/gray"
+                            app:placeholderImageScaleType="centerCrop"
+                            app:roundedCornerRadius="3dp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="5dp"
+                            app:placeholderImage="@color/gray"
+                            app:placeholderImageScaleType="centerCrop"
+                            app:roundedCornerRadius="3dp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="5dp"
+                            app:placeholderImage="@color/gray"
+                            app:placeholderImageScaleType="centerCrop"
+                            app:roundedCornerRadius="3dp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="5dp"
+                            app:placeholderImage="@color/gray"
+                            app:placeholderImageScaleType="centerCrop"
+                            app:roundedCornerRadius="3dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="5dp"
+                            app:placeholderImage="@color/gray"
+                            app:placeholderImageScaleType="centerCrop"
+                            app:roundedCornerRadius="3dp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="5dp"
+                            app:placeholderImage="@color/gray"
+                            app:placeholderImageScaleType="centerCrop"
+                            app:roundedCornerRadius="3dp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="5dp"
+                            app:placeholderImage="@color/gray"
+                            app:placeholderImageScaleType="centerCrop"
+                            app:roundedCornerRadius="3dp" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="5dp"
+                            app:placeholderImage="@color/gray"
+                            app:placeholderImageScaleType="centerCrop"
+                            app:roundedCornerRadius="3dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/car_menu_border"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="群号码    "
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="31862114"
+                    android:textColor="#414141" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/car_menu_border"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/cars"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="群成员    "
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cars_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cars"
+                        android:layout_centerHorizontal="true"
+                        android:text="85"
+                        android:textColor="#dbdbdb"
+                        android:textSize="28sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal" >
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                app:placeholderImage="@color/gray"
+                                app:placeholderImageScaleType="centerCrop"
+                                app:roundedCornerRadius="3dp" />
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                app:placeholderImage="@color/gray"
+                                app:placeholderImageScaleType="centerCrop"
+                                app:roundedCornerRadius="3dp" />
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                app:placeholderImage="@color/gray"
+                                app:placeholderImageScaleType="centerCrop"
+                                app:roundedCornerRadius="3dp" />
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                app:placeholderImage="@color/gray"
+                                app:placeholderImageScaleType="centerCrop"
+                                app:roundedCornerRadius="3dp" />
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                app:placeholderImage="@color/gray"
+                                app:placeholderImageScaleType="centerCrop"
+                                app:roundedCornerRadius="3dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/car_menu_point" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#eeeeee" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:drawableLeft="@drawable/car_group_adduser_img"
+                            android:drawablePadding="10dp"
+                            android:gravity="left"
+                            android:padding="10dp"
+                            android:text="邀请新成员"
+                            android:textColor="#2aa7ff" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/car_menu_point" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/car_grouplist_item_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/car_menu_border"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="群介绍    "
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="人生悲欢离合，酸甜苦辣，皆系于心，心态若安好，就没有过不去的坎。经营好心情，你就拥有了生活的全部。"
+                    android:textColor="#414141" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/car_menu_border"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="所在地    "
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="知本大厦"
+                    android:textColor="#414141" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/car_menu_border"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="创建时间"
+                    android:textColor="#999999"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="2015-09-10"
+                    android:textColor="#414141" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/conversation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#514982"
+        android:gravity="center"
+        android:onClick="onClick" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/car_conversation_img"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:text="进入群聊"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>
