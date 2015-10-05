@@ -3,6 +3,7 @@ package com.playcar.activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -15,23 +16,28 @@ import android.support.v4.view.ViewPager;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.TranslateAnimation;
+import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.playcar.R;
+import com.playcar.activity.group.ActivityGroupAdd;
 import com.playcar.activity.trands.ActivityAddTrand;
 import com.playcar.fragment.CarNearFriendsFragment;
 import com.playcar.fragment.CarNearGroupFragment;
@@ -138,14 +144,17 @@ public class CarNearActivity extends CarBaseActivity {
 			@Override
 			public void onClick(View v) {
 //				动态——筛选
-				Toast.makeText(mContext, "筛选", Toast.LENGTH_LONG).show();
+//				Toast.makeText(mContext, "筛选", Toast.LENGTH_LONG).show();
+				showCompanySelection();
+				
 			}
 		});
 		right_btn3.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 //				群组——创建
-				Toast.makeText(mContext, "创建", Toast.LENGTH_LONG).show();
+//				Toast.makeText(mContext, "创建", Toast.LENGTH_LONG).show();
+				startActivity(new Intent(mContext, ActivityGroupAdd.class));
 			}
 		});
 
@@ -301,4 +310,27 @@ public class CarNearActivity extends CarBaseActivity {
 		// 友盟页面统计
 
 	}
+	
+	/**
+     * 选择
+     */
+    private PopupWindow popSelection;
+
+    private void showCompanySelection() {
+        View sView = View.inflate(mContext, R.layout.car_sort_activity, null);
+        popSelection = new PopupWindow(sView, AbsListView.LayoutParams.MATCH_PARENT,
+                AbsListView.LayoutParams.MATCH_PARENT);
+        TextView go_back_tv = (TextView) sView.findViewById(R.id.go_back_tv);
+        go_back_tv.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				popSelection.dismiss();
+			}
+		});
+        popSelection.setBackgroundDrawable(new BitmapDrawable());
+        popSelection.setAnimationStyle(R.style.popup_anim_style);
+        popSelection.setOutsideTouchable(true);
+        popSelection.setFocusable(true);
+        popSelection.showAtLocation(((RelativeLayout) findViewById(R.id.car_near)), Gravity.CENTER, 0, 20);
+    }
 }

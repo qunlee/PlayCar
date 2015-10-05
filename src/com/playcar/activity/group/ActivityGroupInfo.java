@@ -1,13 +1,20 @@
 package com.playcar.activity.group;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
 import com.playcar.R;
+import com.playcar.activity.trands.ActivityLocal;
 
+/**
+ * 附近——群组详细
+ * @author qunlee_mr
+ *
+ */
 public class ActivityGroupInfo extends Activity implements OnClickListener {
 	
 	private TextView group_title;
@@ -29,7 +36,10 @@ public class ActivityGroupInfo extends Activity implements OnClickListener {
 		case R.id.back_btn:
 			finish();
 			break;
-
+		case R.id.commit_btn:
+			startActivity(new Intent(this, ActivityGroupSetting.class));
+			break;
+		
 		default:
 			break;
 		}

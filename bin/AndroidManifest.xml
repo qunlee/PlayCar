@@ -1030,6 +1030,9 @@
         <activity android:name="com.playcar.activity.trands.ActivityLocal" />
         <activity android:name="com.playcar.activity.friends.ActivityFriendInfo"/>
         <activity android:name="com.playcar.activity.group.ActivityGroupInfo"/>
+        <activity android:name="com.playcar.activity.group.ActivityGroupAdd"/>
+        <activity android:name="com.playcar.activity.group.ActivityGroupDescription"/>
+        <activity android:name="com.playcar.activity.group.ActivityGroupSetting"/>
 
         <service
             android:name="com.wqdsoft.im.service.SnsService"

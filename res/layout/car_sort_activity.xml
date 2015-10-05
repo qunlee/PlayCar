@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:text="登录"
+            android:text="筛选"
             android:layout_centerInParent="true"/>
 
         <TextView
