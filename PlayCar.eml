@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="audio.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/audio.jar!/"/>
+	</lib>
+	<lib name="fastjson-1.1.27-android.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/fastjson-1.1.27-android.jar!/"/>
+	</lib>
+	<lib name="Msc.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/Msc.jar!/"/>
+	</lib>
+	<lib name="zxing.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/zxing.jar!/"/>
+	</lib>
+	<lib name="baidumapapi_v2_3_1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/baidumapapi_v2_3_1.jar!/"/>
+	</lib>
+	<lib name="locSDK_3.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/locSDK_3.1.jar!/"/>
+	</lib>
+	<lib name="universal-image-loader-1.9.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/universal-image-loader-1.9.3.jar!/"/>
+	</lib>
+	<lib name="imageLoader.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/imageLoader.jar!/"/>
+	</lib>
+	<lib name="pinyin4j-2.5.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/pinyin4j-2.5.0.jar!/"/>
+	</lib>
+	<lib name="afinal_0.5.1_bin.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/afinal_0.5.1_bin.jar!/"/>
+	</lib>
+	<levels>
+		<level name="libs" value="project"/>
+	</levels>
+</component>

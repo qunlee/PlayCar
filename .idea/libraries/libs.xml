@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../FrescoLib/libs/annotations-3.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FrescoLib/libs/bolts-android-1.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FrescoLib/libs/library-1.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FrescoLib/libs/nineoldandroidslib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FrescoLib/libs/okhttp-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../FrescoLib/libs/android-support-v4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,10 +1,12 @@
 package com.playcar.activity;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -50,13 +52,14 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
 
     //公共跳转接口
     protected void jumpTo(Class<? extends Activity> targetActivity) {
-        Intent jumpIntent = new Intent(this,targetActivity);
+        Intent jumpIntent = new Intent(this, targetActivity);
         jumpIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
                 | Intent.FLAG_ACTIVITY_SINGLE_TOP
                 | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         this.startActivity(jumpIntent);
     }
 
+    /*声明主页*/
     protected void jumpToLogin() {
         // 声明主页Intent
         final Intent intent = new Intent(this, CarLoginActivity.class);
@@ -71,7 +74,6 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
      *
      * @param
      * @param targetActivity
-
      */
     protected void jumpTo(Class<?> targetActivity, Bundle pBundle) {
         Intent intent = new Intent(this, targetActivity);
@@ -127,17 +129,17 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
     BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            if(intent == null){
+            if (intent == null) {
                 return;
             }//销毁整个运用
             if (intent.getAction().equals(GlobalParam.ACTION_DESTROY_CURRENT_ACTIVITY)) {
-                String name = ((Activity)mContext).getLocalClassName();
-                if(!name.equals("ChatsTab")&& !name.equals("ContactsTab")&& !name.equals("ContactAddrActivity")
-                        && !name.equals("ContactPinLiActivity")	&& !name.equals("ContactAddTimeActivity")
+                String name = ((Activity) mContext).getLocalClassName();
+                if (!name.equals("ChatsTab") && !name.equals("ContactsTab") && !name.equals("ContactAddrActivity")
+                        && !name.equals("ContactPinLiActivity") && !name.equals("ContactAddTimeActivity")
                         && !name.equals("ContactProjectActivity") && !name.equals("ContactSubjectActivity")
                         && !name.equals("FindTab") && !name.equals("ProfileTab")
-                        && !name.equals("SubTab")){
-                    ((Activity)mContext).finish();
+                        && !name.equals("SubTab")) {
+                    ((Activity) mContext).finish();
 
                 }
 
@@ -146,8 +148,8 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
     };
 
 
-    public final static int BASE_SHOW_PROGRESS_DIALOG  = 0x11112;
-    public final static int BASE_HIDE_PROGRESS_DIALOG  = 0x11113;
+    public final static int BASE_SHOW_PROGRESS_DIALOG = 0x11112;
+    public final static int BASE_HIDE_PROGRESS_DIALOG = 0x11113;
     public final static int BASE_MSG_NETWORK_ERROR = 11114;
     public final static int BASE_MSG_TIMEOUT_ERROR = 11115;
     protected CustomProgressDialog mProgressDialog;
@@ -157,71 +159,74 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
     /*
      * 处理整个运用公用消息
      */
-    public Handler mBaseHandler = new Handler(){
+    public Handler mBaseHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             switch (msg.what) {
                 case BASE_SHOW_PROGRESS_DIALOG://显示提示框
-                    String dialogMsg = (String)msg.obj;
+                    String dialogMsg = (String) msg.obj;
                     showProgressDialog(dialogMsg);
                     break;
                 case BASE_HIDE_PROGRESS_DIALOG://隐藏提示框
                     hideProgressDialog();
-                    String hintMsg = (String)msg.obj;
-                    if(hintMsg!=null && !hintMsg.equals("")){
+                    String hintMsg = (String) msg.obj;
+                    if (hintMsg != null && !hintMsg.equals("")) {
                         Toast.makeText(mContext, hintMsg, Toast.LENGTH_LONG).show();
                     }
                     break;
                 case BASE_MSG_NETWORK_ERROR://网络连接错误
-                    Toast.makeText(mContext, R.string.network_error,Toast.LENGTH_LONG).show();
+                    Toast.makeText(mContext, R.string.network_error, Toast.LENGTH_LONG).show();
                     hideProgressDialog();
                     break;
                 case BASE_MSG_TIMEOUT_ERROR://连接网络超时
                     hideProgressDialog();
-                    String timeOutMsg = (String)msg.obj;
+                    String timeOutMsg = (String) msg.obj;
                     Toast.makeText(mContext, timeOutMsg, Toast.LENGTH_LONG).show();
                     break;
             }
         }
     };
 
-    public void showProgressDialog(String msg,Context context){
-        mProgressDialog = new CustomProgressDialog(mContext);
-        mProgressDialog.setMessage(msg);
-        mProgressDialog.show();
-    }
-    public void showProgressDialog(String msg){
+    public void showProgressDialog(String msg, Context context) {
         mProgressDialog = new CustomProgressDialog(mContext);
         mProgressDialog.setMessage(msg);
         mProgressDialog.show();
     }
 
-    public void hideProgressDialog(){
+    public void showProgressDialog(String msg) {
+        mProgressDialog = new CustomProgressDialog(mContext);
+        mProgressDialog.setMessage(msg);
+        mProgressDialog.show();
+    }
+
+    public void hideProgressDialog() {
         if (mProgressDialog != null && mProgressDialog.isShowing()) {
             mProgressDialog.dismiss();
             mProgressDialog = null;
         }
     }
 
-    /**+++ for title bar +++*/
-    protected ImageView mLeftIcon, mRightBtn,mSearchBtn,mAddBtn,mMoreBtn;
+    /**
+     * +++ for title bar +++
+     */
+    protected ImageView mLeftIcon, mRightBtn, mSearchBtn, mAddBtn, mMoreBtn;
     //protected LinearLayout mRightBtn;
-    protected TextView titileTextView,mFristTitlte,mTrowTitle,mRightTextBtn;
+    protected TextView titileTextView, mFristTitlte, mTrowTitle, mRightTextBtn;
     protected RelativeLayout mFirstLayout;
-    protected LinearLayout mLeftBtn,mCenterLayout;
+    protected LinearLayout mLeftBtn, mCenterLayout;
 
-    protected void setTitleContent(int left_src_id, int right_src_id, int title_id){
-        mLeftBtn = (LinearLayout)findViewById(R.id.left_btn);
-        mLeftIcon = (ImageView)findViewById(R.id.left_icon);
-        mRightBtn = (ImageView)findViewById(R.id.right_btn);
-        mRightTextBtn = (TextView)findViewById(R.id.right_text_btn);
+    protected void setTitleContent(int left_src_id, int right_src_id, int title_id) {
+        mLeftBtn = (LinearLayout) findViewById(R.id.left_btn);
+        mLeftIcon = (ImageView) findViewById(R.id.left_icon);
+        mRightBtn = (ImageView) findViewById(R.id.right_btn);
+        mRightTextBtn = (TextView) findViewById(R.id.right_text_btn);
         //mRightBtn = (LinearLayout)findViewById(R.id.right_btn);
-        mSearchBtn = (ImageView)findViewById(R.id.search_btn);
-        mAddBtn = (ImageView)findViewById(R.id.add_btn);
-        mMoreBtn = (ImageView)findViewById(R.id.more_btn);
+        mSearchBtn = (ImageView) findViewById(R.id.search_btn);
+        mAddBtn = (ImageView) findViewById(R.id.add_btn);
+        mMoreBtn = (ImageView) findViewById(R.id.more_btn);
 
-        titileTextView = (TextView)findViewById(R.id.title);
+        titileTextView = (TextView) findViewById(R.id.title);
 
         if (left_src_id != 0) {
             mLeftIcon.setImageResource(left_src_id);
@@ -238,26 +243,26 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
     }
 
     protected void setTrowMenuTitleContent(int left_src_id, int right_src_id,
-                                           String firstTitlte,String trowTitle){
-        mLeftBtn = (LinearLayout)findViewById(R.id.left_btn);
-        mLeftIcon = (ImageView)findViewById(R.id.left_icon);
-        mRightBtn = (ImageView)findViewById(R.id.right_btn);
-        mRightTextBtn = (TextView)findViewById(R.id.right_text_btn);
+                                           String firstTitlte, String trowTitle) {
+        mLeftBtn = (LinearLayout) findViewById(R.id.left_btn);
+        mLeftIcon = (ImageView) findViewById(R.id.left_icon);
+        mRightBtn = (ImageView) findViewById(R.id.right_btn);
+        mRightTextBtn = (TextView) findViewById(R.id.right_text_btn);
         //mRightBtn = (LinearLayout)findViewById(R.id.right_btn);
-        mSearchBtn = (ImageView)findViewById(R.id.search_btn);
-        mAddBtn = (ImageView)findViewById(R.id.add_btn);
-        mMoreBtn = (ImageView)findViewById(R.id.more_btn);
+        mSearchBtn = (ImageView) findViewById(R.id.search_btn);
+        mAddBtn = (ImageView) findViewById(R.id.add_btn);
+        mMoreBtn = (ImageView) findViewById(R.id.more_btn);
 
-        titileTextView = (TextView)findViewById(R.id.title);
+        titileTextView = (TextView) findViewById(R.id.title);
         titileTextView.setVisibility(View.GONE);
 
-        mFristTitlte= (TextView)findViewById(R.id.other_title);
-        mTrowTitle= (TextView)findViewById(R.id.child_title);
-        if(firstTitlte!=null && !firstTitlte.equals("")){
+        mFristTitlte = (TextView) findViewById(R.id.other_title);
+        mTrowTitle = (TextView) findViewById(R.id.child_title);
+        if (firstTitlte != null && !firstTitlte.equals("")) {
             mFristTitlte.setText(firstTitlte);
             mFristTitlte.setVisibility(View.VISIBLE);
         }
-        if(trowTitle!=null && !trowTitle.equals("")){
+        if (trowTitle != null && !trowTitle.equals("")) {
             mTrowTitle.setText(trowTitle);
             mTrowTitle.setVisibility(View.VISIBLE);
         }
@@ -273,23 +278,23 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
 
     }
 
-    protected void setTitleContent(int left_src_id,boolean isShowSearch, int right_src_id, int title_id){
-        mLeftBtn = (LinearLayout)findViewById(R.id.left_btn);
-        mLeftIcon = (ImageView)findViewById(R.id.left_icon);
-        mRightBtn = (ImageView)findViewById(R.id.right_btn);
-        mRightTextBtn = (TextView)findViewById(R.id.right_text_btn);
+    protected void setTitleContent(int left_src_id, boolean isShowSearch, int right_src_id, int title_id) {
+        mLeftBtn = (LinearLayout) findViewById(R.id.left_btn);
+        mLeftIcon = (ImageView) findViewById(R.id.left_icon);
+        mRightBtn = (ImageView) findViewById(R.id.right_btn);
+        mRightTextBtn = (TextView) findViewById(R.id.right_text_btn);
         //mRightBtn = (LinearLayout)findViewById(R.id.right_btn);
-        mSearchBtn = (ImageView)findViewById(R.id.search_btn);
-        mAddBtn = (ImageView)findViewById(R.id.add_btn);
-        mMoreBtn = (ImageView)findViewById(R.id.more_btn);
+        mSearchBtn = (ImageView) findViewById(R.id.search_btn);
+        mAddBtn = (ImageView) findViewById(R.id.add_btn);
+        mMoreBtn = (ImageView) findViewById(R.id.more_btn);
 
-        titileTextView = (TextView)findViewById(R.id.title);
+        titileTextView = (TextView) findViewById(R.id.title);
 
         if (left_src_id != 0) {
             mLeftIcon.setImageResource(left_src_id);
         }
 
-        if(isShowSearch){
+        if (isShowSearch) {
             mSearchBtn.setVisibility(View.VISIBLE);
         }
 
@@ -304,29 +309,29 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
     }
 
     protected void setTitleContent(int left_src_id, boolean showSearchIcon,
-                                   boolean showAddIcon,boolean showMoreIcon,int title_id){
-        mLeftBtn = (LinearLayout)findViewById(R.id.left_btn);
-        mLeftIcon = (ImageView)findViewById(R.id.left_icon);
-        mRightBtn = (ImageView)findViewById(R.id.right_btn);
-        mRightTextBtn = (TextView)findViewById(R.id.right_text_btn);
+                                   boolean showAddIcon, boolean showMoreIcon, int title_id) {
+        mLeftBtn = (LinearLayout) findViewById(R.id.left_btn);
+        mLeftIcon = (ImageView) findViewById(R.id.left_icon);
+        mRightBtn = (ImageView) findViewById(R.id.right_btn);
+        mRightTextBtn = (TextView) findViewById(R.id.right_text_btn);
         //mRightBtn = (LinearLayout)findViewById(R.id.right_btn);
-        mSearchBtn = (ImageView)findViewById(R.id.search_btn);
-        mAddBtn = (ImageView)findViewById(R.id.add_btn);
-        mMoreBtn = (ImageView)findViewById(R.id.more_btn);
-        titileTextView = (TextView)findViewById(R.id.title);
-        mCenterLayout = (LinearLayout)findViewById(R.id.center_layout);
+        mSearchBtn = (ImageView) findViewById(R.id.search_btn);
+        mAddBtn = (ImageView) findViewById(R.id.add_btn);
+        mMoreBtn = (ImageView) findViewById(R.id.more_btn);
+        titileTextView = (TextView) findViewById(R.id.title);
+        mCenterLayout = (LinearLayout) findViewById(R.id.center_layout);
 
         if (left_src_id != 0) {
             mLeftIcon.setImageResource(left_src_id);
         }
-        if(showSearchIcon){
+        if (showSearchIcon) {
             mSearchBtn.setVisibility(View.VISIBLE);
         }
 
-        if(showAddIcon){
+        if (showAddIcon) {
             mAddBtn.setVisibility(View.VISIBLE);
         }
-        if(showMoreIcon){
+        if (showMoreIcon) {
             mMoreBtn.setVisibility(View.VISIBLE);
         }
 
@@ -337,17 +342,17 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
     }
 
 
-    protected void setRightTextTitleContent(int left_src_id, String right_src_id, int title_id){
-        mLeftBtn = (LinearLayout)findViewById(R.id.left_btn);
-        mLeftIcon = (ImageView)findViewById(R.id.left_icon);
-        mRightBtn = (ImageView)findViewById(R.id.right_btn);
-        mRightTextBtn = (TextView)findViewById(R.id.right_text_btn);
+    protected void setRightTextTitleContent(int left_src_id, String right_src_id, int title_id) {
+        mLeftBtn = (LinearLayout) findViewById(R.id.left_btn);
+        mLeftIcon = (ImageView) findViewById(R.id.left_icon);
+        mRightBtn = (ImageView) findViewById(R.id.right_btn);
+        mRightTextBtn = (TextView) findViewById(R.id.right_text_btn);
         //mRightBtn = (LinearLayout)findViewById(R.id.right_btn);
-        mSearchBtn = (ImageView)findViewById(R.id.search_btn);
-        mAddBtn = (ImageView)findViewById(R.id.add_btn);
-        mMoreBtn = (ImageView)findViewById(R.id.more_btn);
+        mSearchBtn = (ImageView) findViewById(R.id.search_btn);
+        mAddBtn = (ImageView) findViewById(R.id.add_btn);
+        mMoreBtn = (ImageView) findViewById(R.id.more_btn);
 
-        titileTextView = (TextView)findViewById(R.id.title);
+        titileTextView = (TextView) findViewById(R.id.title);
 
         if (left_src_id != 0) {
             mLeftIcon.setImageResource(left_src_id);
@@ -364,17 +369,17 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
     }
 
 
-    protected void setRightTextTitleContent(int left_src_id, int right_src_id, int title_id){
-        mLeftBtn = (LinearLayout)findViewById(R.id.left_btn);
-        mLeftIcon = (ImageView)findViewById(R.id.left_icon);
-        mRightBtn = (ImageView)findViewById(R.id.right_btn);
-        mRightTextBtn = (TextView)findViewById(R.id.right_text_btn);
+    protected void setRightTextTitleContent(int left_src_id, int right_src_id, int title_id) {
+        mLeftBtn = (LinearLayout) findViewById(R.id.left_btn);
+        mLeftIcon = (ImageView) findViewById(R.id.left_icon);
+        mRightBtn = (ImageView) findViewById(R.id.right_btn);
+        mRightTextBtn = (TextView) findViewById(R.id.right_text_btn);
         //mRightBtn = (LinearLayout)findViewById(R.id.right_btn);
-        mSearchBtn = (ImageView)findViewById(R.id.search_btn);
-        mAddBtn = (ImageView)findViewById(R.id.add_btn);
-        mMoreBtn = (ImageView)findViewById(R.id.more_btn);
+        mSearchBtn = (ImageView) findViewById(R.id.search_btn);
+        mAddBtn = (ImageView) findViewById(R.id.add_btn);
+        mMoreBtn = (ImageView) findViewById(R.id.more_btn);
 
-        titileTextView = (TextView)findViewById(R.id.title);
+        titileTextView = (TextView) findViewById(R.id.title);
 
         if (left_src_id != 0) {
             mLeftIcon.setImageResource(left_src_id);
@@ -390,15 +395,15 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
         }
     }
 
-    protected void setTitleContent(int left_src_id, int right_src_id, String title_text){
-        mLeftBtn = (LinearLayout)findViewById(R.id.left_btn);
-        mLeftIcon = (ImageView)findViewById(R.id.left_icon);
-        mRightBtn = (ImageView)findViewById(R.id.right_btn);
-        mRightTextBtn = (TextView)findViewById(R.id.right_text_btn);
-        mSearchBtn = (ImageView)findViewById(R.id.search_btn);
-        mAddBtn = (ImageView)findViewById(R.id.add_btn);
-        mMoreBtn = (ImageView)findViewById(R.id.more_btn);
-        titileTextView = (TextView)findViewById(R.id.title);
+    protected void setTitleContent(int left_src_id, int right_src_id, String title_text) {
+        mLeftBtn = (LinearLayout) findViewById(R.id.left_btn);
+        mLeftIcon = (ImageView) findViewById(R.id.left_icon);
+        mRightBtn = (ImageView) findViewById(R.id.right_btn);
+        mRightTextBtn = (TextView) findViewById(R.id.right_text_btn);
+        mSearchBtn = (ImageView) findViewById(R.id.search_btn);
+        mAddBtn = (ImageView) findViewById(R.id.add_btn);
+        mMoreBtn = (ImageView) findViewById(R.id.more_btn);
+        titileTextView = (TextView) findViewById(R.id.title);
         // mRightBtn = (LinearLayout)findViewById(R.id.right_btn);
 
         if (left_src_id != 0) {
@@ -415,7 +420,9 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
         }
     }
 
-    /**--- for title bar ---*/
+    /**
+     * --- for title bar ---
+     */
     @Override
     protected void onStop() {
         super.onStop();
@@ -433,10 +440,11 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
      * (non-Javadoc)
      * @see android.view.View.OnClickListener#onClick(android.view.View)
      */
+    @TargetApi(Build.VERSION_CODES.CUPCAKE)
     @Override
     public void onClick(View v) {
-        if(getCurrentFocus()!=null && getCurrentFocus().getWindowToken()!=null){
-            InputMethodManager manager= (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (getCurrentFocus() != null && getCurrentFocus().getWindowToken() != null) {
+            InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             manager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         }
     }
@@ -450,7 +458,7 @@ public class CarBaseActivity extends FragmentActivity implements View.OnClickLis
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(mReceiver!=null){
+        if (mReceiver != null) {
             unregisterReceiver(mReceiver);
         }
     }

@@ -495,7 +495,7 @@ public ColorFilter getColorFilter() {
    */
   public RoundedDrawable setCornerRadius(float topLeft, float topRight, float bottomRight,
       float bottomLeft) {
-    Set<Float> radiusSet = new HashSet<>(4);
+    Set<Float> radiusSet = new HashSet<Float>(4);
     radiusSet.add(topLeft);
     radiusSet.add(topRight);
     radiusSet.add(bottomRight);
