@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip">
+        <Button
+            android:id="@+id/btn_addCar" 
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:background="@drawable/gray_fillet_mianbackground_shape"
+            android:textColor="@color/color_747474"
+            style="@style/txt_14size_singline_nomal"
+            android:text="添加爱车"/>
+    </RelativeLayout>
+
+</LinearLayout>

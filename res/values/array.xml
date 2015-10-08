@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="data">
+        <item>阿尔法罗密欧</item>
+        <item>阿斯顿·马丁</item>
+        <item>安凯客车</item>
+        <item>奥迪</item>
+        <item>巴博斯</item>
+        <item>宝骏</item>
+        <item>宝马</item>
+        <item>保时捷</item>
+        <item>北京</item>
+        <item>北汽幻速</item>
+        <item>北汽绅宝</item>
+        <item>北汽威旺</item>
+        <item>北汽新能源</item>
+        <item>北汽制造</item>
+        <item>奔驰</item>
+        <item>奔腾</item>
+        <item>本田</item>
+        <item>比亚迪</item>
+        <item>标志</item>
+        <item>别克</item>
+        <item>宾利</item>
+        <item>布加迪</item>
+        <item>昌河</item>
+        <item>长安</item>
+        <item>长安商用</item>
+        <item>长城</item>
+        <item>DS</item>
+        <item>大发</item>
+        <item>大众</item>
+        <item>道奇</item>
+        <item>东风</item>
+        <item>东风风度</item>
+        <item>东风风神</item>
+        <item>东风风行</item>
+        <item>东风小康</item>
+        <item>东南</item>
+        <item>法拉利</item>
+        <item>菲亚特</item>
+        <item>丰田</item>
+        <item>福迪</item>
+        <item>福汽启腾</item>
+        <item>福特</item>
+        <item>福田</item>
+    </string-array>
+
+</resources>
