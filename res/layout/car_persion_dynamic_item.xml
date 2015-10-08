@@ -20,7 +20,6 @@
             android:scaleType="center"
             android:src="@drawable/car"
             app:riv_border_color="@color/color_cccccc"
-            app:riv_border_width="3dip"
             app:riv_corner_radius="5dip"
             app:riv_oval="false" />
 

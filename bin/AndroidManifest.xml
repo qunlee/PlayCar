@@ -34,20 +34,68 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.playcar.activity.news.CarPushMessageActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.news.ChatingActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
             android:name="com.playcar.activity.mine.CarMineActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarAddContactFriendsActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarAddGroupActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarAddCarActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarMyCarListActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarParamActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarListActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarEditActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarDetailActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarPersonDynamicActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.playcar.activity.mine.CarEditMineInfoActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.playcar.activity.mine.CarSettingActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.playcar.activity.mine.CarAddFriendsActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.playcar.activity.mine.CarMineInfoActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
             android:name="com.wqdsoft.im.LoginTypeActivity"
@@ -1028,11 +1076,11 @@
         <activity android:name="com.playcar.activity.trands.ActivityAddTrand" />
         <activity android:name="com.playcar.activity.trands.ActivityTrandInfo" />
         <activity android:name="com.playcar.activity.trands.ActivityLocal" />
-        <activity android:name="com.playcar.activity.friends.ActivityFriendInfo"/>
-        <activity android:name="com.playcar.activity.group.ActivityGroupInfo"/>
-        <activity android:name="com.playcar.activity.group.ActivityGroupAdd"/>
-        <activity android:name="com.playcar.activity.group.ActivityGroupDescription"/>
-        <activity android:name="com.playcar.activity.group.ActivityGroupSetting"/>
+        <activity android:name="com.playcar.activity.friends.ActivityFriendInfo" />
+        <activity android:name="com.playcar.activity.group.ActivityGroupInfo" />
+        <activity android:name="com.playcar.activity.group.ActivityGroupAdd" />
+        <activity android:name="com.playcar.activity.group.ActivityGroupDescription" />
+        <activity android:name="com.playcar.activity.group.ActivityGroupSetting" />
 
         <service
             android:name="com.wqdsoft.im.service.SnsService"

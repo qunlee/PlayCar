@@ -3,6 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-	<include layout="@layout/car_listview_layout"/>
+
+    <com.playcar.view.HeadView
+        android:id="@+id/headView"
+        style="@style/head_view" />
+
+    <include layout="@layout/car_listview_layout" />
 
 </LinearLayout>

@@ -5,6 +5,10 @@
     android:background="#f7f7f7"
     android:orientation="vertical" >
 
+    <com.playcar.view.HeadView
+        android:id="@+id/headView"
+        style="@style/head_view" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -26,8 +30,8 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:drawableLeft="@drawable/btn_back"
-            android:text="返回"
             android:drawablePadding="3dp"
+            android:text="返回"
             android:textColor="#fff"
             android:textSize="18sp" />
     </RelativeLayout>

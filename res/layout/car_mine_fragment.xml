@@ -2,21 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-   	android:background="@android:color/white">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="7dip"
-            android:layout_marginTop="6dip"
-            android:background="@drawable/info" />
-    </RelativeLayout>
+    android:background="@android:color/white"
+    android:orientation="vertical" >
 
     <ImageView
         android:layout_width="match_parent"
@@ -37,7 +24,6 @@
             android:orientation="vertical" >
 
             <ImageView
-                android:id="@+id/img_head"
                 android:layout_width="80dip"
                 android:layout_height="80dip"
                 android:layout_marginTop="16dip"
@@ -142,7 +128,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical" >
-                       <TextView
+
+                    <TextView
                         style="@style/txt_13size_singline_nomal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -161,5 +148,19 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/img_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="7dip"
+            android:layout_marginTop="6dip"
+            android:background="@drawable/info" />
+    </RelativeLayout>
 
 </RelativeLayout>

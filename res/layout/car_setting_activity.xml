@@ -5,7 +5,9 @@
     android:background="@color/main_groundback"
     android:orientation="vertical" >
 
-    <com.playcar.view.HeadView style="@style/head_view" />
+    <com.playcar.view.HeadView
+        android:id="@+id/headView"
+         style="@style/head_view" />
 
     <LinearLayout
         android:layout_width="match_parent"

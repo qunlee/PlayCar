@@ -33,7 +33,7 @@ public final class R {
 		public static final int roundingBorderWidth = 0x7f010015;
 	}
 	public static final class drawable {
-		public static final int ic_launcher = 0x7f020300;
+		public static final int ic_launcher = 0x7f020306;
 	}
 	public static final class string {
 		public static final int app_name = 0x7f070000;

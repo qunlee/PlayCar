@@ -5,9 +5,6 @@
     android:background="@color/main_groundback"
     android:orientation="vertical" >
 
-    <com.playcar.view.HeadView
-        style="@style/head_view"/>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -2,10 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-    <ListView 
+    android:orientation="vertical"
+    android:background="@color/main_groundback" >
+
+    <com.playcar.view.HeadView
+        android:id="@+id/headView"
+        style="@style/head_view" />
+
+    <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

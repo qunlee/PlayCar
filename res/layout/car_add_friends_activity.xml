@@ -5,7 +5,9 @@
     android:background="@color/main_groundback"
     android:orientation="vertical" >
 
-    <com.playcar.view.HeadView style="@style/head_view" />
+	<com.playcar.view.HeadView
+	    android:id="@+id/headView"
+	    style="@style/head_view"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,6 +19,7 @@
         android:paddingTop="10dip" >
 
         <TextView
+            android:id="@+id/txt_add_contact_friends"
             style="@style/txt_12size_nomal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,6 +43,7 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/txt_add_wechat_friends"
             style="@style/txt_12size_nomal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,6 +67,7 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/txt_add_qq_friends"
             style="@style/txt_12size_nomal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

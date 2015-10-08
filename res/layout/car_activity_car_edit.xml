@@ -5,42 +5,9 @@
     android:background="#f7f7f7"
     android:orientation="vertical" >
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="#5b5184" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="爱车详情"
-            android:textColor="#fff"
-            android:textSize="22sp" />
-
-        <TextView
-            android:id="@+id/tv_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:drawableLeft="@drawable/btn_back"
-            android:drawablePadding="3dp"
-            android:text="返回"
-            android:textColor="#fff"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
-            android:layout_marginRight="10dp"
-            android:text="保存"
-            android:textColor="#fff"
-            android:textSize="18sp" />
-    </RelativeLayout>
+    <com.playcar.view.HeadView
+        android:id="@+id/headView"
+        style="@style/head_view" />
 
     <com.playcar.view.HorizontalListView
         android:id="@+id/hlv_car_imgs"
@@ -55,6 +22,7 @@
         android:background="#f0f0f0" />
 
     <RelativeLayout
+        android:id="@+id/layout_car_type"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="#fff"
@@ -104,6 +72,7 @@
     </LinearLayout>
 
     <RelativeLayout
+        android:id="@+id/layout_car_params"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="#fff"

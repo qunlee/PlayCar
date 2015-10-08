@@ -2,7 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_groundback"
     android:orientation="vertical" >
+
+    <com.playcar.view.HeadView
+        android:id="@+id/headView"
+        style="@style/head_view" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,4 +32,5 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+
 </LinearLayout>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/main_groundback" >
 
-    <com.handmark.pulltorefresh.library.PullToRefreshListView
+    <com.wk.libs.listview.PullToRefreshListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

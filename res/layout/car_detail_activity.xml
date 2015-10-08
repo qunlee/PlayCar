@@ -6,6 +6,10 @@
     android:background="@color/main_groundback"
     android:orientation="vertical" >
 
+    <com.playcar.view.HeadView
+        android:id="@+id/headView"
+        style="@style/head_view" />
+
     <com.playcar.view.adversiting.AdvertisingView
         android:layout_width="match_parent"
         app:layout_heightPercent="56.25%w" />
@@ -99,18 +103,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
-    
-    <RelativeLayout 
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dip">
-        <Button 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        android:padding="10dip" >
+
+        <Button
             style="@style/txt_13size_singline_nomal"
-            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
             android:background="@drawable/blue_fillet_blue_shape"
-            android:text="立即认证"/>
+            android:text="立即认证"
+            android:textColor="@android:color/white" />
     </RelativeLayout>
 
 </com.playcar.view.percentlayout.PercentLinearLayout>
