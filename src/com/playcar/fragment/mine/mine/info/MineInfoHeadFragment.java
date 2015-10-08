@@ -1,5 +1,6 @@
 package com.playcar.fragment.mine.mine.info;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -9,6 +10,8 @@ import android.view.ViewGroup;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.event.OnClick;
 import com.playcar.R;
+import com.playcar.activity.mine.CarEditMineInfoActivity;
+import com.playcar.activity.mine.CarMineBaseActivity;
 import com.playcar.fragment.mine.mine.MineBaseFragment;
 
 /**
@@ -23,8 +26,14 @@ public class MineInfoHeadFragment extends MineBaseFragment{
 		ViewUtils.inject(this, view);
 		return view;
 	}
+	@OnClick(R.id.txt_back)
+	private void onclick_back(View v){
+		getActivity().finish();
+	}
 	@OnClick(R.id.txt_right)
 	private void onlick_edit(View v){
-		
+		Intent intent = new Intent(getActivity() , CarEditMineInfoActivity.class);
+		CarMineBaseActivity activity = (CarMineBaseActivity) getActivity();
+		activity.openActivityAfterLogin(intent);
 	}
 }

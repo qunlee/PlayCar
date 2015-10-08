@@ -80,7 +80,7 @@ public class CarMainActivity extends TabActivity implements CompoundButton.OnChe
         tabSpec4.setContent(intent);
         mHost.addTab(tabSpec4);
 
-        intent = new Intent(CarMainActivity.this, CarPushMessageActivity.class);
+        intent = new Intent(CarMainActivity.this, com.playcar.activity.news.CarPushMessageActivity.class);
         TabHost.TabSpec tabSpec1 = mHost.newTabSpec("scenicSpot");
         tabSpec1.setIndicator(getString(R.string.forth_tab), getResources().getDrawable(R.drawable.ic_launcher));
         tabSpec1.setContent(intent);

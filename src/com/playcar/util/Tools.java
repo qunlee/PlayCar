@@ -16,8 +16,15 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
+import android.util.DisplayMetrics;
 
 public class Tools {
+	public static int getScreenWidth(Context context){
+		DisplayMetrics dm = new DisplayMetrics();
+		Activity activity = (Activity) context;
+		activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
+		return dm.widthPixels;//宽度height = dm.heightPixels ;//高度
+	}
 
 	/**
 	 * 检测是否 存在SD卡

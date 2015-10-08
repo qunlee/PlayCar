@@ -10,7 +10,7 @@ import com.playcar.R;
  * @author Administrator
  * 
  */
-public class CarRecordActivity extends Activity {
+public class CarRecordActivity extends CarMineBaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub

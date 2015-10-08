@@ -1,5 +1,4 @@
 package com.playcar.activity.mine;
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,7 +14,7 @@ import com.playcar.R;
  * @author Administrator
  *
  */
-public class CarMyProfessionActivity extends Activity {
+public class CarMyProfessionActivity extends CarMineBaseActivity {
 
 	private ListView listView;
 

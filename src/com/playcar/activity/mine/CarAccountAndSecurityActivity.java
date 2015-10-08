@@ -1,6 +1,5 @@
 package com.playcar.activity.mine;
 
-import android.app.Activity;
 import android.os.Bundle;
 
 import com.playcar.R;
@@ -10,7 +9,7 @@ import com.playcar.R;
  * @author Administrator
  *
  */
-public class CarAccountAndSecurityActivity extends Activity {
+public class CarAccountAndSecurityActivity extends CarMineBaseActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -41,9 +41,13 @@ public class HeadView extends FrameLayout {
 		this.context = context;
 		this.currentLayout = LayoutInflater.from(context).inflate(R.layout.car_head_view, null);
 		LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
-		this.setLayoutParams(param);
-		this.addView(currentLayout);
+		this.addView(currentLayout,param);
 		ViewUtils.inject(this, currentLayout);
+	}
+	public void setBackValue(String value){
+		if(txt_back != null){
+			txt_back.setText(value);
+		}
 	}
 	/**
 	 * 设置标题
@@ -77,6 +81,16 @@ public class HeadView extends FrameLayout {
 	public void setRightValue(String title){
 		if(txt_right != null){
 			txt_right.setText(title);
+		}
+	}
+	public void onclickBack(OnClickListener l){
+		if(txt_back != null){
+			txt_back.setOnClickListener(l);
+		}
+	}
+	public void onclickRight(OnClickListener l){
+		if(txt_right != null){
+			txt_right.setOnClickListener(l);
 		}
 	}
 

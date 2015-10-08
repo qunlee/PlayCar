@@ -1,59 +1,36 @@
 package com.playcar.adapter.mine;
-import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.AbsListView;
+import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
 
 import com.playcar.R;
+import com.playcar.util.Tools;
 
-public class CarHorizontalAdapter<T> extends BaseAdapter {
+public class CarHorizontalAdapter extends AdapterManager<String> {
 
-	private Context mContext;
-	private LayoutInflater mInflater;
-	private List<T> mList;
-
-	public CarHorizontalAdapter(Context context) {
-		this.mContext = context;
-		this.mInflater = LayoutInflater.from(context);
-		mList = new ArrayList<T>();
+	public CarHorizontalAdapter(List<String> list, Context context) {
+		super(list, context);
 	}
 
-	public void setList(List<T> list) {
-		if (list == null) {
-			return;
+	@Override
+	public View getView(int arg0, View arg1, ViewGroup arg2) {
+		ImageView imageView = null;
+		if(arg1 == null){
+			 imageView = new ImageView(context);
 		}
-		mList = list;
-
+		int width = Tools.dip2px(context, 60);
+		AbsListView.LayoutParams params = new AbsListView.LayoutParams(width, width);
+		imageView.setLayoutParams(params);
+		imageView.setImageResource(R.drawable.car);
+		imageView.setScaleType(ScaleType.FIT_XY);
+		return imageView;
 	}
 
-	@Override
-	public int getCount() {
-		// TODO Auto-generated method stub
-		return mList.size();
-	}
 
-	@Override
-	public Object getItem(int position) {
-		// TODO Auto-generated method stub
-		return mList.get(position);
-	}
-
-	@Override
-	public long getItemId(int position) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		if (convertView == null) {
-			convertView = mInflater.inflate(R.layout.car_listitem_car_img, null);
-		}
-		return convertView;
-	}
 
 }

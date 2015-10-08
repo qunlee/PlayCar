@@ -21,8 +21,8 @@ public class MineFragment extends MineBaseFragment{
 	    ViewUtils.inject(this, currentLayout);
 		return currentLayout;
 	}
-	@OnClick(R.id.img_head)
-	private void onclick_head(View v){
+	@OnClick(R.id.img_info)
+	private void onclick_info(View v){
 		BaseActivity activity = (BaseActivity) getActivity();
 		activity.openActivityAfterLogin(new Intent(getActivity(),CarMineInfoActivity.class));
 	}
