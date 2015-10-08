@@ -3,12 +3,15 @@ package com.playcar.activity.news;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
+import com.lidroid.xutils.view.annotation.event.OnItemClick;
 import com.playcar.R;
 import com.playcar.activity.mine.CarMineBaseActivity;
 import com.playcar.adapter.news.NewsAdapter;
@@ -48,4 +51,10 @@ public class CarPushMessageActivity extends CarMineBaseActivity{
 		}
 		newsAdapter.notifyDataSetChanged();
 	}
+	@OnItemClick(R.id.swipeListView)
+	private void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3){
+		Intent intent = new Intent(this,ChatingActivity.class);
+		openActivityAfterLogin(intent);
+	}
+	
 }

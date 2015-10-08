@@ -15,9 +15,10 @@
 
         <TextView
             android:id="@+id/tv_sendtime"
-            style="@style/chat_text_date_style"
+            style="@style/txt_12size_nomal"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_999999" />
     </LinearLayout>
 
     <RelativeLayout
@@ -27,8 +28,8 @@
 
         <com.playcar.view.roundedimageview.RoundedImageView
             android:id="@+id/iv_userhead"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginLeft="20dip"
             android:scaleType="centerCrop"
             android:src="@drawable/car"
@@ -44,20 +45,27 @@
 
             <TextView
                 android:id="@+id/tv_name"
-                android:text="你好"
-                android:padding="2dip"
-                android:textColor="@color/color_999999"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"/>
-
-            <TextView
-                android:id="@+id/tv_chatcontent"
-                style="@style/chat_content_date_style"
+                style="@style/txt_12size_nomal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/chat_left_item" />
+                android:padding="2dip"
+                android:text="你好"
+                android:textColor="@color/color_999999" />
+
+            <TextView
+                android:id="@+id/tv_chatcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/chat_left_item" 
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="left|center"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="50dp"
+                android:textColor="@color/color_333333"
+                android:textSize="12sp" />
         </LinearLayout>
     </RelativeLayout>
 
